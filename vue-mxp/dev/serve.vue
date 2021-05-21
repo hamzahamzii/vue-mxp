@@ -2,17 +2,20 @@
 import { defineComponent } from "vue";
 // Uncomment import and local "components" registration if library is not registered globally.
 import { mxpButton } from "@/entry.esm";
+import { mxpInput } from "@/entry.esm";
 
 export default defineComponent({
   name: "ServeDev",
   components: {
     mxpButton,
+    mxpInput,
   },
 });
 </script>
 
 <template>
-  <div id="app">
+  <div class="flex" id="app">
     <mxpButton />
+    <mxpInput />
   </div>
 </template>

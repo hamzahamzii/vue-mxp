@@ -5,7 +5,7 @@ var script$1 = defineComponent({
 });
 
 const _hoisted_1$1 = /*#__PURE__*/createVNode("button", {
-  class: "px-3 bg-red-500"
+  class: "m-2 px-3 bg-red-500"
 }, "click me", -1);
 
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
@@ -18,9 +18,10 @@ var script = defineComponent({
   name: "mxpInput"
 });
 
-const _hoisted_1 = /*#__PURE__*/createVNode("button", {
-  class: "px-3 bg-red-500"
-}, "click me", -1);
+const _hoisted_1 = /*#__PURE__*/createVNode("input", {
+  type: "text",
+  class: "m-2 px-3 bg-red-200"
+}, null, -1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock("div", null, [_hoisted_1]);

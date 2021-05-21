@@ -58,16 +58,17 @@ function _nonIterableRest() {
 }var script$1 = vue.defineComponent({
   name: "mxpButton"
 });var _hoisted_1$1 = /*#__PURE__*/vue.createVNode("button", {
-  class: "px-3 bg-red-500"
+  class: "m-2 px-3 bg-red-500"
 }, "click me", -1);
 
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", null, [_hoisted_1$1]);
 }script$1.render = render$1;var script = vue.defineComponent({
   name: "mxpInput"
-});var _hoisted_1 = /*#__PURE__*/vue.createVNode("button", {
-  class: "px-3 bg-red-500"
-}, "click me", -1);
+});var _hoisted_1 = /*#__PURE__*/vue.createVNode("input", {
+  type: "text",
+  class: "m-2 px-3 bg-red-200"
+}, null, -1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", null, [_hoisted_1]);
