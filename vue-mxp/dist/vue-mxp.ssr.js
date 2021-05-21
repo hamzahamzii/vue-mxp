@@ -89,7 +89,7 @@ Object.entries(components).forEach(function (_ref) {
       componentName = _ref2[0],
       component = _ref2[1];
 
-  if (componentName !== 'default') {
+  if (componentName !== "default") {
     var key = componentName;
     var val = component;
     install[key] = val;

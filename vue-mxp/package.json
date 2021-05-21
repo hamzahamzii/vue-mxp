@@ -1,6 +1,6 @@
 {
   "name": "vue-mxp",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
@@ -16,7 +16,10 @@
   "files": [
     "dist/*",
     "vue-mxp.d.ts",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/assets/*.css",
+    "postcss.config.js",
+    "tailwind.config.js"
   ],
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.1.2",
