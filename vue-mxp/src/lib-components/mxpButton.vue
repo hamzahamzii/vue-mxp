@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="m-2 px-3 bg-red-500">click me</button>
+    <button class="m-2 px-3 bg-blue-500">click me</button>
   </div>
 </template>
 
