@@ -56,13 +56,44 @@ function _arrayLikeToArray(arr, len) {
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }var script$1 = vue.defineComponent({
-  name: "mxpButton"
-});var _hoisted_1$1 = /*#__PURE__*/vue.createVNode("button", {
-  class: "m-2 px-3 bg-red-500"
-}, "click me", -1);
-
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
-  return vue.openBlock(), vue.createBlock("div", null, [_hoisted_1$1]);
+  name: "mxpButton",
+  props: {
+    // Sizing
+    width: Number,
+    maxWidth: Number,
+    small: Boolean,
+    // Border
+    rounded: Boolean,
+    square: Boolean,
+    // Color options
+    color: String,
+    secondary: Boolean,
+    subtle: Boolean,
+    primary: Boolean,
+    filled: Boolean,
+    stroke: Boolean,
+    text: Boolean
+  },
+  computed: {
+    computedClasses: function computedClasses() {
+      return {
+        "rounded-lg": this.rounded && !this.square,
+        "rounded-none": this.square && !this.rounded,
+        "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled,
+        "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke
+      };
+    },
+    computedStyles: function computedStyles() {
+      return {
+        "background-color": this.color ? this.color : ""
+      };
+    }
+  }
+});function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode("button", {
+    style: _ctx.computedStyles,
+    class: [_ctx.computedClasses, "m-2 px-8 py-1"]
+  }, [vue.renderSlot(_ctx.$slots, "default")], 6)]);
 }script$1.render = render$1;var script = vue.defineComponent({
   name: "mxpInput"
 });var _hoisted_1 = /*#__PURE__*/vue.createVNode("input", {

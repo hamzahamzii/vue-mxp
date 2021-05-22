@@ -37,8 +37,8 @@ export default defineComponent({
   computed: {
     computedClasses(): any {
       return {
-        "rounded-lg": this.rounded,
-        "rounded-none": this.square,
+        "rounded-lg": this.rounded && !this.square,
+        "rounded-none": this.square && !this.rounded,
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
           this.stroke && !this.filled,
         "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke,
