@@ -1,9 +1,10 @@
 {
   "name": "vue-mxp",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
+    "style": "tailwindcss build src/assets/index.css -o src/assets/tailwind.css",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
