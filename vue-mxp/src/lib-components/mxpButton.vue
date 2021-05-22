@@ -1,6 +1,10 @@
 <template>
   <div>
-    <button :class="computedClasses" class="m-2 px-3 bg-green-500">
+    <button
+      :style="computedStyles"
+      :class="computedClasses"
+      class="m-2 px-8 py-1"
+    >
       <slot></slot>
     </button>
   </div>
@@ -33,8 +37,17 @@ export default defineComponent({
   computed: {
     computedClasses(): any {
       return {
-        rounded: this.rounded,
+        "rounded-lg": this.rounded,
         "rounded-none": this.square,
+        "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
+          this.stroke && !this.filled,
+        "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke,
+      };
+    },
+
+    computedStyles(): any {
+      return {
+        "background-color": this.color ? this.color : "",
       };
     },
   },
