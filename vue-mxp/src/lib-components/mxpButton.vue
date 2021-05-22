@@ -35,8 +35,10 @@ export default defineComponent({
       return {
         "px-5 py-1": !this.small,
         "px-3 py-1 text-xs": this.small,
-        "rounded-lg": this.rounded && !this.square,
-        "rounded-none": this.square && !this.rounded,
+        "bg-white text-blue hover:text-blue-dark rounded-lg":
+          this.text && !this.filled && !this.stroke,
+        "rounded-lg": this.rounded && !this.square && !this.text,
+        "rounded-none": this.square && !this.rounded && !this.text,
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
           this.stroke && !this.filled,
         "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke,
