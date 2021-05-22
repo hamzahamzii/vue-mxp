@@ -1,6 +1,11 @@
 <template>
   <div>
-    <button class="m-2 px-3 bg-green-500">click me</button>
+    <button
+      :class="{ rounded: rounded, 'rounded-none': square }"
+      class="m-2 px-3 bg-green-500"
+    >
+      <slot></slot>
+    </button>
   </div>
 </template>
 
@@ -9,15 +14,21 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "mxpButton",
   props: {
+    // Sizing
+    width: Number,
+    maxWidth: Number,
+    small: Boolean,
+
+    // Border
     rounded: Boolean,
     square: Boolean,
+
+    // Color options
     secondary: Boolean,
     subtle: Boolean,
     primary: Boolean,
-
     filled: Boolean,
     stroke: Boolean,
-    small: Boolean,
     text: Boolean,
   },
 });

@@ -15,7 +15,7 @@ export default defineComponent({
 
 <template>
   <div class="flex" id="app">
-    <mxpButton />
+    <mxpButton rounded square>YOOO</mxpButton>
     <mxpInput />
   </div>
 </template>
