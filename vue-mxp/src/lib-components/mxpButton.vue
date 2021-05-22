@@ -3,7 +3,7 @@
     <button
       :style="computedStyles"
       :class="computedClasses"
-      class="active:bg-blue-light m-2"
+      class="active:bg-opacity-80 m-2"
     >
       <slot></slot>
     </button>
@@ -37,16 +37,16 @@ export default defineComponent({
   computed: {
     computedClasses(): any {
       return {
-        "px-5 py-1": !this.small,
+        "px-7 py-1": !this.small,
         "px-3 py-1 text-xs": this.small,
-        "bg-white text-blue hover:text-blue-dark rounded-lg focus:outline-none":
+        "bg-white text-red-600 hover:text-green-500 rounded-lg focus:outline-none":
           this.text && !this.filled && !this.stroke,
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
           this.stroke && !this.filled,
-        "bg-blue hover:bg-blue-dark  text-white": this.filled && !this.stroke,
-      "focus:outline-none focus:ring-4 text-white": !this.text
+        "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke,
+        "focus:outline-none focus:ring-4 text-white": !this.text,
       };
     },
 
