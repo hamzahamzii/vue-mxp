@@ -77,8 +77,11 @@ function _nonIterableRest() {
   computed: {
     computedClasses: function computedClasses() {
       return {
-        "rounded-lg": this.rounded && !this.square,
-        "rounded-none": this.square && !this.rounded,
+        "px-5 py-1": !this.small,
+        "px-3 py-1 text-xs": this.small,
+        "bg-white text-blue hover:text-blue-dark rounded-lg": this.text && !this.filled && !this.stroke,
+        "rounded-lg": this.rounded && !this.square && !this.text,
+        "rounded-none": this.square && !this.rounded && !this.text,
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled,
         "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke
       };
@@ -92,7 +95,7 @@ function _nonIterableRest() {
 });function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode("button", {
     style: _ctx.computedStyles,
-    class: [_ctx.computedClasses, "m-2 px-8 py-1"]
+    class: [_ctx.computedClasses, "active:bg-red m-2"]
   }, [vue.renderSlot(_ctx.$slots, "default")], 6)]);
 }script$1.render = render$1;var script = vue.defineComponent({
   name: "mxpInput"

@@ -24,7 +24,7 @@ module.exports = {
       green: colors.emerald,
       blue: {
         light: "#E4F4FC",
-        DEFAULT: "#2db6f5",
+        DEFAULT: "#2dbff5",
         dark: "#0B8CDB",
       },
       indigo: colors.indigo,
@@ -863,6 +863,7 @@ module.exports = {
       "group-hover",
       "focus-within",
       "hover",
+      "active",
       "focus",
     ],
     backgroundImage: ["responsive"],
