@@ -23,6 +23,7 @@ module.exports = {
       yellow: colors.amber,
       green: colors.emerald,
       blue: {
+        lightest: "#f4fbff",
         light: "#E4F4FC",
         DEFAULT: "#2dbff5",
         dark: "#0B8CDB",
