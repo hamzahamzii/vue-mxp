@@ -23,7 +23,8 @@ module.exports = {
       yellow: colors.amber,
       green: colors.emerald,
       blue: {
-        light: "#E4F4FC",
+        lightest: "#E4F4FC",
+        light: "#5AC6F8",
         DEFAULT: "#2dbff5",
         dark: "#0B8CDB",
       },
@@ -874,6 +875,7 @@ module.exports = {
       "focus-within",
       "hover",
       "focus",
+      "active",
     ],
     backgroundPosition: ["responsive"],
     backgroundRepeat: ["responsive"],
