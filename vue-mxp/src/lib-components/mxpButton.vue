@@ -1,9 +1,6 @@
 <template>
   <div>
-    <button
-      :class="{ rounded: rounded, 'rounded-none': square }"
-      class="m-2 px-3 bg-green-500"
-    >
+    <button :class="computedClasses" class="m-2 px-3 bg-green-500">
       <slot></slot>
     </button>
   </div>
@@ -24,12 +21,22 @@ export default defineComponent({
     square: Boolean,
 
     // Color options
+    color: String,
     secondary: Boolean,
     subtle: Boolean,
     primary: Boolean,
     filled: Boolean,
     stroke: Boolean,
     text: Boolean,
+  },
+
+  computed: {
+    computedClasses(): any {
+      return {
+        rounded: this.rounded,
+        "rounded-none": this.square,
+      };
+    },
   },
 });
 </script>
