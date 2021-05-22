@@ -1,6 +1,10 @@
 <template>
   <div>
-    <button :style="computedStyles" :class="computedClasses" class="m-2">
+    <button
+      :style="computedStyles"
+      :class="computedClasses"
+      class="active:bg-blue-light m-2"
+    >
       <slot></slot>
     </button>
   </div>

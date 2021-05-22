@@ -12,7 +12,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="flex mt-4 ml-4" id="app">
-    <mxpButton text>Button</mxpButton>
+  <div class="flex" id="app">
+    <mxpButton rounded filled small>Button</mxpButton>
   </div>
 </template>
