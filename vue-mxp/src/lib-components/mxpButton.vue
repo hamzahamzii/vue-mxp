@@ -3,7 +3,7 @@
     <button
       :style="computedStyles"
       :class="computedClasses"   
-      class="active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2"  
+      class="m-2"  
     >
       <slot></slot>
     </button>
@@ -46,7 +46,7 @@ export default defineComponent({
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
           this.stroke && !this.filled,
         "bg-blue hover:bg-blue-dark  text-white": this.filled && !this.stroke,
-      "focus:outline-none focus:ring-4 text-white": !this.text
+      "focus:outline-none focus:ring-4 text-white active:bg-blue-dim active:ring active:ring-blue active:ring-8 active:ring-offset-0 active:rounded-full": !this.text
       };
     },
 
