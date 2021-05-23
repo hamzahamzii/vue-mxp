@@ -13,6 +13,8 @@ export default defineComponent({
 
 <template>
   <div class="flex" id="app">
-    <mxpButton rounded filled small>Button</mxpButton>
+    <mxpButton color="red" rounded loader filled small >Button
+    </mxpButton>
+    
   </div>
 </template>
