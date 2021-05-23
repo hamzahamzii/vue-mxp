@@ -2,8 +2,8 @@
   <div>
     <button
       :style="computedStyles"
-      :class="computedClasses"
-      class="active:bg-blue-light m-2"
+      :class="computedClasses"   
+      class="active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2"  
     >
       <slot></slot>
     </button>
