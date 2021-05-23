@@ -5,15 +5,11 @@
       :class="computedClasses"   
       class="active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2"  
     >  
-     <!-- Displays the slot in case of no loader or loader with filled -->
-      <slot class="inline" v-if="!loader || (loader && filled  && !secondary && !subtle && !text) "></slot>
-      <!-- Displays the next icon only in case of filled  -->
-      <svg  v-if="loader  && filled && !text && !subtle && !secondary" xmlns="http://www.w3.org/2000/svg" class=" inline h-3 w-3 ml-1" fill="white" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg>
-      <!-- Displays the loader icon only in case of secondary or subtle  -->
-      <svg v-if="loader && (secondary || subtle) && !filled && !text" class="animate-spin" width="15" height="15" viewBox="0 0 50 50">
-        <path fill="#87ceeb" d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"></path>
+     <!-- Displays the slot in case of no loader -->
+      <slot v-if="!loader"></slot>
+      <!-- Displays the loader in case of filled and secondary -->
+      <svg v-if="loader && !text" :fill="[secondary || stroke ? 'skyblue' : 'white']" class="animate-spin" width="15" height="15" viewBox="0 0 50 50">
+        <path  d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"></path>
       </svg>
       <!-- Displays the loader icon in case of text  -->
       <span v-if="loader && text && !filled && !subtle && !secondary" class="text-blue">loading...</span>
