@@ -61,8 +61,7 @@ export default defineComponent({
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
           this.stroke && !this.filled,
         "bg-blue hover:bg-blue-dark  text-white": this.filled && !this.stroke,
-      "focus:outline-none focus:ring-4 text-white": !this.text,
-
+      "focus:outline-none focus:ring-4 text-white active:bg-blue-dim active:ring active:ring-blue active:ring-8 active:ring-offset-0 active:rounded-full": !this.text
       };
     },
 
