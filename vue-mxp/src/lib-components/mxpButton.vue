@@ -8,7 +8,7 @@
      <!-- Displays the slot in case of no loader or loader with filled -->
       <slot class="inline" v-if="!loader || (loader && filled  && !secondary && !subtle && !text) "></slot>
       <!-- Displays the next icon only in case of filled  -->
-      <svg  v-if="loader  && filled && !text && !subtle && !secondary" xmlns="http://www.w3.org/2000/svg" class=" inline h-3 w-3" fill="white" viewBox="0 0 24 24" stroke="currentColor">
+      <svg  v-if="loader  && filled && !text && !subtle && !secondary" xmlns="http://www.w3.org/2000/svg" class=" inline h-3 w-3 mx-1" fill="white" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
       </svg>
       <!-- Displays the loader icon only in case of secondary or subtle  -->
