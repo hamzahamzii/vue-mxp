@@ -18,6 +18,7 @@ yarn add vue-mxp
 import { createApp } from 'vue'
 import App from './App.vue'
 import vueMxp from 'vue-mxp';
+import "vue-mxp/src/assets/index.css";
 const app = createApp(App);
 app.use(vueMxp);
 app.mount('#app')

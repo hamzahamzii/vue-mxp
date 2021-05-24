@@ -24,15 +24,25 @@ var script$1 = defineComponent({
   computed: {
     computedClasses() {
       return {
-        "px-5 py-1": !this.small,
+        "px-5 py-2": !this.small,
         "px-3 py-1 text-xs": this.small,
-        "bg-white text-blue hover:text-blue-dark rounded-lg focus:outline-none focus:bg-blue-lightest": this.text && !this.filled && !this.stroke,
+        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest": this.text && !this.filled && !this.stroke,
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
-        "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled,
-        "bg-blue hover:bg-blue-dark  text-white": this.filled && !this.stroke,
-        "focus:outline-none focus:ring-4 text-white active:bg-blue-dim active:ring active:ring-blue active:ring-8 active:ring-offset-0 active:rounded-full": !this.text
+        "border-2 border-blue active:bg-blue-lightest ring-inner-white hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled && !this.text,
+        "bg-blue text-white active:bg-blue-dim hover:bg-blue-dark ": this.filled && !this.stroke && !this.text || this.default,
+        "focus:ring-4": !this.text
       };
+    },
+
+    // Size helper for small/normal button
+    scale() {
+      return this.small ? "15" : "23";
+    },
+
+    // Button with no props
+    default() {
+      return !this.filled && !this.stroke && !this.text;
     },
 
     computedStyles() {
@@ -55,17 +65,17 @@ const _hoisted_2 = {
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock("div", null, [createVNode("button", {
     style: _ctx.computedStyles,
-    class: [_ctx.computedClasses, "active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2"]
+    class: [_ctx.computedClasses, "focus:outline-none active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2 flex justify-center align-center"]
   }, [!_ctx.loader ? renderSlot(_ctx.$slots, "default", {
     key: 0
   }) : createCommentVNode("", true), _ctx.loader && !_ctx.text ? (openBlock(), createBlock("svg", {
     key: 1,
-    fill: [_ctx.secondary || _ctx.stroke ? 'skyblue' : 'white'],
+    fill: _ctx.stroke ? 'skyblue' : 'white',
     class: "animate-spin",
-    width: "15",
-    height: "15",
+    width: _ctx.scale,
+    height: _ctx.scale,
     viewBox: "0 0 50 50"
-  }, [_hoisted_1$1], 8, ["fill"])) : createCommentVNode("", true), _ctx.loader && _ctx.text && !_ctx.filled && !_ctx.subtle && !_ctx.secondary ? (openBlock(), createBlock("span", _hoisted_2, "loading...")) : createCommentVNode("", true)], 6)]);
+  }, [_hoisted_1$1], 8, ["fill", "width", "height"])) : createCommentVNode("", true), _ctx.loader && _ctx.text ? (openBlock(), createBlock("span", _hoisted_2, "loading...")) : createCommentVNode("", true)], 6)]);
 }
 
 script$1.render = render$1;
