@@ -3,7 +3,7 @@
     <button
       :style="computedStyles"
       :class="computedClasses"
-      class="focus:outline-none active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2 flex justify-center align-center"
+      class="focus:outline-none m-2 flex justify-center align-center"
     >
       <!-- No loader -->
       <slot v-if="!loader"></slot>
@@ -64,7 +64,7 @@ export default defineComponent({
         "rounded-none": this.square && !this.rounded && !this.text,
         "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
           this.stroke && !this.filled && !this.text,
-        "bg-blue text-white active:bg-blue-dim hover:bg-blue-dark ":
+        "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner":
           (this.filled && !this.stroke && !this.text) || this.default,
         "focus:ring-4": !this.text,
       };
