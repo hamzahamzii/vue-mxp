@@ -57,16 +57,22 @@ export default defineComponent({
     computedClasses(): any {
       return {
         "px-5 py-2": !this.small,
-        "px-3 py-1 text-xs": this.small,
-        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest":
-          this.text && !this.filled && !this.stroke,
+        "focus:ring-4": !this.text,
+        // Rounded button
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
+        // Small button
+        "px-3 py-1 text-xs": this.small,
+        // text button
+        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest":
+          this.text && !this.filled && !this.stroke,
+        // stroke button
         "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-lightest bg-white text-blue":
           this.stroke && !this.filled && !this.text,
+        // filled button
         "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner":
           (this.filled && !this.stroke && !this.text) || this.default,
-        "focus:ring-4": !this.text,
+        
       };
     },
 
