@@ -62,7 +62,7 @@ export default defineComponent({
           this.text && !this.filled && !this.stroke,
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
-        "border-2 border-blue active:bg-blue-lightest ring-inner-white hover:border-blue-dark hover:text-blue-dark bg-white text-blue":
+        "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-lightest bg-white text-blue":
           this.stroke && !this.filled && !this.text,
         "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner":
           (this.filled && !this.stroke && !this.text) || this.default,

@@ -30,7 +30,7 @@ var script$1 = defineComponent({
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         "border-2 border-blue active:bg-blue-lightest ring-inner-white hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled && !this.text,
-        "bg-blue text-white active:bg-blue-dim hover:bg-blue-dark ": this.filled && !this.stroke && !this.text || this.default,
+        "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner": this.filled && !this.stroke && !this.text || this.default,
         "focus:ring-4": !this.text
       };
     },
@@ -65,7 +65,7 @@ const _hoisted_2 = {
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock("div", null, [createVNode("button", {
     style: _ctx.computedStyles,
-    class: [_ctx.computedClasses, "focus:outline-none active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2 flex justify-center align-center"]
+    class: [_ctx.computedClasses, "focus:outline-none m-2 flex justify-center align-center"]
   }, [!_ctx.loader ? renderSlot(_ctx.$slots, "default", {
     key: 0
   }) : createCommentVNode("", true), _ctx.loader && !_ctx.text ? (openBlock(), createBlock("svg", {
