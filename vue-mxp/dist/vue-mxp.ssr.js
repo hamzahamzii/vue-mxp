@@ -84,14 +84,10 @@ function _nonIterableRest() {
         "bg-white text-blue hover:text-blue-dark rounded-lg focus:outline-none focus:bg-blue-lightest": this.text && !this.filled && !this.stroke,
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
-        "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled && !this.text,
-        "bg-blue hover:bg-blue-dark text-white": this.filled && !this.stroke && !this.text || this.default,
+        "border-2 border-blue hover:border-blue-dark hover:text-blue-dark bg-white text-blue": this.stroke && !this.filled,
+        "bg-blue hover:bg-blue-dark  text-white": this.filled && !this.stroke,
         "focus:outline-none focus:ring-4 text-white active:bg-blue-dim active:ring active:ring-blue active:ring-8 active:ring-offset-0 active:rounded-full": !this.text
       };
-    },
-    // Button with no props
-    default: function _default() {
-      return !this.filled && !this.stroke && !this.text;
     },
     computedStyles: function computedStyles() {
       return {
@@ -115,12 +111,12 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0
   }) : vue.createCommentVNode("", true), _ctx.loader && !_ctx.text ? (vue.openBlock(), vue.createBlock("svg", {
     key: 1,
-    fill: _ctx.stroke ? 'skyblue' : 'white',
+    fill: [_ctx.secondary || _ctx.stroke ? 'skyblue' : 'white'],
     class: "animate-spin",
     width: "15",
     height: "15",
     viewBox: "0 0 50 50"
-  }, [_hoisted_1$1], 8, ["fill"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text && !_ctx.filled && !_ctx.subtle && !_ctx.stroke ? (vue.openBlock(), vue.createBlock("span", _hoisted_2, "loading...")) : vue.createCommentVNode("", true)], 6)]);
+  }, [_hoisted_1$1], 8, ["fill"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text && !_ctx.filled && !_ctx.subtle && !_ctx.secondary ? (vue.openBlock(), vue.createBlock("span", _hoisted_2, "loading...")) : vue.createCommentVNode("", true)], 6)]);
 }script$1.render = render$1;var script = vue.defineComponent({
   name: "mxpInput"
 });var _hoisted_1 = /*#__PURE__*/vue.createVNode("input", {
