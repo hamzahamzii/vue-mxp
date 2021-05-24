@@ -2,19 +2,6 @@
   <div>
     <button
       :style="computedStyles"
-<<<<<<< HEAD
-      :class="computedClasses"   
-      class="active:bg-blue-dim active:ring active:ring-blue active:ring-4 active:ring-offset-0 m-2"  
-    >  
-     <!-- Displays the slot in case of no loader -->
-      <slot v-if="!loader"></slot>
-      <!-- Displays the loader in case of filled and secondary -->
-      <svg v-if="loader && !text" :fill="[secondary || stroke ? 'skyblue' : 'white']" class="animate-spin" width="15" height="15" viewBox="0 0 50 50">
-        <path  d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"></path>
-      </svg>
-      <!-- Displays the loader icon in case of text  -->
-      <span v-if="loader && text && !filled && !subtle && !secondary" class="text-blue">loading...</span>
-=======
       :class="computedClasses"
       class="focus:outline-none m-2 flex justify-center align-center"
     >
@@ -35,7 +22,6 @@
       </svg>
       <!-- loader text  -->
       <span v-if="loader && text" class="text-blue">loading...</span>
->>>>>>> a1e6aca9e250b684ee6c3ad34d90f46b7b48480d
     </button>
   </div>
 </template>
@@ -65,7 +51,6 @@ export default defineComponent({
 
     // Icons
     loader: Boolean,
-
   },
 
   computed: {
