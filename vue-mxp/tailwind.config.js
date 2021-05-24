@@ -23,7 +23,7 @@ module.exports = {
       yellow: colors.amber,
       green: colors.emerald,
       blue: {
-        dim: "#00d0ff",
+        dim: "#5AC6F8",
         lightest: "#f4fbff",
         light: "#E4F4FC",
         DEFAULT: "#2dbff5",
@@ -865,8 +865,8 @@ module.exports = {
       "group-hover",
       "focus-within",
       "hover",
-      "active",
       "focus",
+      "active",
     ],
     backgroundImage: ["responsive"],
     backgroundOpacity: [
@@ -876,6 +876,7 @@ module.exports = {
       "focus-within",
       "hover",
       "focus",
+      "active",
     ],
     backgroundPosition: ["responsive"],
     backgroundRepeat: ["responsive"],
@@ -889,6 +890,7 @@ module.exports = {
       "focus-within",
       "hover",
       "focus",
+      "active",
     ],
     borderOpacity: [
       "responsive",
@@ -897,7 +899,7 @@ module.exports = {
       "focus-within",
       "hover",
       "focus",
-      "active"
+      "active",
     ],
     borderRadius: ["responsive", "active"],
     borderStyle: ["responsive"],
