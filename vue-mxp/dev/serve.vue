@@ -18,5 +18,6 @@ export default defineComponent({
     <mxpTextInput disabled placeholder="This is a disabled input" ></mxpTextInput>
     <mxpTextInput successMessage="This is a success message" placeholder="I am green" ></mxpTextInput>
     <mxpTextInput description small placeholder="This is a placeholder" ></mxpTextInput>
+    <mxpTextInput description errorMessage="This is an error message" placeholder="This is a placeholder" ></mxpTextInput>
   </div>
 </template>
