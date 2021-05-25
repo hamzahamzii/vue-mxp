@@ -73,6 +73,8 @@ function _nonIterableRest() {
     filled: Boolean,
     stroke: Boolean,
     text: Boolean,
+    // Type
+    disabled: Boolean,
     // Icons
     loader: Boolean
   },
@@ -87,11 +89,15 @@ function _nonIterableRest() {
         // Small button
         "px-3 py-1 text-xs": this.small,
         // text button
-        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest": this.text && !this.filled && !this.stroke,
+        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest": this.text && !this.filled && !this.stroke && !this.subtle,
         // stroke button
-        "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-lightest bg-white text-blue": this.stroke && !this.filled && !this.text,
+        "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-lightest bg-white text-blue": this.stroke && !this.filled && !this.text && !this.subtle,
         // filled button
-        "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner": this.filled && !this.stroke && !this.text || this.default
+        "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner": this.filled && !this.stroke && !this.text && !this.subtle || this.default,
+        // subtle button
+        "bg-white border-2 border-gray-100 text-blue hover:text-blue-dark focus:ring-gray-100 ": this.subtle && !this.stroke && !this.filled && !this.text,
+        // disabled button
+        "opacity-25 hover:bg-blue": this.disabled
       };
     },
     // Size helper for small/normal button
@@ -100,7 +106,7 @@ function _nonIterableRest() {
     },
     // Button with no props
     default: function _default() {
-      return !this.filled && !this.stroke && !this.text;
+      return !this.filled && !this.stroke && !this.text && !this.subtle;
     },
     computedStyles: function computedStyles() {
       return {
@@ -112,34 +118,101 @@ function _nonIterableRest() {
   d: "M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"
 }, null, -1);
 
-var _hoisted_2 = {
+var _hoisted_2$1 = {
   key: 2,
   class: "text-blue"
 };
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode("button", {
     style: _ctx.computedStyles,
-    class: [_ctx.computedClasses, "focus:outline-none m-2 flex justify-center align-center"]
+    class: [_ctx.computedClasses, "focus:outline-none m-2 flex justify-center align-center"],
+    disabled: _ctx.disabled
   }, [!_ctx.loader ? vue.renderSlot(_ctx.$slots, "default", {
     key: 0
   }) : vue.createCommentVNode("", true), _ctx.loader && !_ctx.text ? (vue.openBlock(), vue.createBlock("svg", {
     key: 1,
-    fill: _ctx.stroke ? 'skyblue' : 'white',
+    fill: _ctx.stroke || _ctx.subtle ? 'skyblue' : 'white',
     class: "animate-spin",
     width: _ctx.scale,
     height: _ctx.scale,
     viewBox: "0 0 50 50"
-  }, [_hoisted_1$1], 8, ["fill", "width", "height"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text ? (vue.openBlock(), vue.createBlock("span", _hoisted_2, "loading...")) : vue.createCommentVNode("", true)], 6)]);
+  }, [_hoisted_1$1], 8, ["fill", "width", "height"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text ? (vue.openBlock(), vue.createBlock("span", _hoisted_2$1, "loading...")) : vue.createCommentVNode("", true)], 14, ["disabled"])]);
 }script$1.render = render$1;var script = vue.defineComponent({
-  name: "mxpInput"
-});var _hoisted_1 = /*#__PURE__*/vue.createVNode("input", {
-  type: "text",
-  class: "m-2 px-3 bg-red-200"
-}, null, -1);
-
+  name: "mxpTextInput",
+  props: {
+    // Sizing
+    width: Number,
+    maxWidth: Number,
+    small: Boolean,
+    // Type
+    rounded: Boolean,
+    description: Boolean,
+    disabled: Boolean,
+    // Color options
+    color: String,
+    // Captions
+    caption: String,
+    successMessage: String,
+    errorMessage: String,
+    // Placeholder
+    placeholder: String,
+    // Icons
+    search: Boolean
+  },
+  computed: {
+    computedClasses: function computedClasses() {
+      return {
+        // small inputs
+        "px-1 py-1": this.small,
+        "bg-green-100 border-2 border-green-500": this.successMessage,
+        "bg-red-100 border-2 border-red-500": this.errorMessage,
+        "bg-gray-100 border-none": this.disabled
+      };
+    },
+    // Size helper for small/normal button
+    scale: function scale() {
+      return this.small ? "15" : "23";
+    },
+    computedStyles: function computedStyles() {
+      return {
+        "background-color": this.color ? this.color : ""
+      };
+    }
+  }
+});var _hoisted_1 = {
+  class: "flex flex-col"
+};
+var _hoisted_2 = {
+  key: 2,
+  class: "text-gray-500 mx-2"
+};
+var _hoisted_3 = {
+  key: 3,
+  class: "text-green-500 mx-2"
+};
+var _hoisted_4 = {
+  key: 4,
+  class: "text-red-500 mx-2"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return vue.openBlock(), vue.createBlock("div", null, [_hoisted_1]);
-}script.render = render;/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpInput: script});var install = function installVueMxp(app) {
+  return vue.openBlock(), vue.createBlock("div", _hoisted_1, [!_ctx.description ? (vue.openBlock(), vue.createBlock("input", {
+    key: 0,
+    placeholder: _ctx.placeholder,
+    disabled: _ctx.disabled,
+    width: _ctx.width,
+    type: "text",
+    class: ["outline-none bg-gray-100 rounded-lg text-xs p-2 mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
+    style: _ctx.computedStyles
+  }, null, 14, ["placeholder", "disabled", "width"])) : (vue.openBlock(), vue.createBlock("textarea", {
+    key: 1,
+    placeholder: _ctx.placeholder,
+    disabled: _ctx.disabled,
+    class: ["outline-none rounded-lg bg-gray-100 text-xs mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
+    style: [{
+      "padding": "12px!important"
+    }, _ctx.computedStyles]
+  }, null, 14, ["placeholder", "disabled"])), _ctx.caption ? (vue.openBlock(), vue.createBlock("small", _hoisted_2, vue.toDisplayString(_ctx.caption), 1)) : vue.createCommentVNode("", true), _ctx.successMessage ? (vue.openBlock(), vue.createBlock("small", _hoisted_3, vue.toDisplayString(_ctx.successMessage), 1)) : vue.createCommentVNode("", true), _ctx.errorMessage ? (vue.openBlock(), vue.createBlock("small", _hoisted_4, vue.toDisplayString(_ctx.errorMessage), 1)) : vue.createCommentVNode("", true)]);
+}script.render = render;/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],
@@ -148,7 +221,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     app.component(componentName, component);
   });
 }; // Create module definition for Vue.use()
-var components=/*#__PURE__*/Object.freeze({__proto__:null,'default': install,mxpButton: script$1,mxpInput: script});// only expose one global var, with component exports exposed as properties of
+var components=/*#__PURE__*/Object.freeze({__proto__:null,'default': install,mxpButton: script$1,mxpTextInput: script});// only expose one global var, with component exports exposed as properties of
 // that global var (eg. plugin.component)
 
 Object.entries(components).forEach(function (_ref) {
