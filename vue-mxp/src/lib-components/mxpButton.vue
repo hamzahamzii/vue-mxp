@@ -66,7 +66,7 @@ export default defineComponent({
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         // Small button
-        "px-3 py-1 text-xs": this.small,
+        "px-3 py-1 text-sm": this.small,
         // text button
         "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-dim":
           this.text && !this.filled && !this.stroke && !this.subtle,
