@@ -11,7 +11,7 @@
       <!-- loader icon -->
       <svg
         v-if="loader && !text"
-        :fill="stroke ? 'skyblue' : 'white'"
+        :fill="stroke || subtle ? 'skyblue' : 'white'"
         class="animate-spin"
         :width="scale"
         :height="scale"
@@ -69,13 +69,18 @@ export default defineComponent({
         "px-3 py-1 text-xs": this.small,
         // text button
         "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest":
-          this.text && !this.filled && !this.stroke,
+          this.text && !this.filled && !this.stroke && !this.subtle ,
         // stroke button
         "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-lightest bg-white text-blue":
-          this.stroke && !this.filled && !this.text,
+          this.stroke && !this.filled && !this.text && !this.subtle,
         // filled button
         "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner":
-          (this.filled && !this.stroke && !this.text) || this.default,
+          (this.filled && !this.stroke && !this.text && !this.subtle) || this.default,
+        // subtle button
+        "bg-white border-2 border-gray-100 text-blue hover:text-blue-dark focus:ring-gray-100 ":
+          this.subtle && !this.stroke && !this.filled && !this.text,
+        // disabled button
+        "opacity-25 hover:bg-blue":this.disabled 
         
       };
     },
@@ -87,7 +92,7 @@ export default defineComponent({
 
     // Button with no props
     default(): Boolean {
-      return !this.filled && !this.stroke && !this.text;
+      return !this.filled && !this.stroke && !this.text && !this.subtle;
     },
 
     computedStyles(): any {

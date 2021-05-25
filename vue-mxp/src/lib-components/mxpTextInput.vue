@@ -65,10 +65,6 @@ export default defineComponent({
       return this.small ? "15" : "23";
     },
 
-    // Button with no props
-    // default(): Boolean {
-    // },
-
     computedStyles(): any {
       return {
         "background-color": this.color ? this.color : "",
