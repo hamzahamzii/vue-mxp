@@ -1,7 +1,7 @@
 import { defineComponent, openBlock, createBlock, createVNode, renderSlot, createCommentVNode, toDisplayString } from 'vue';
 
 var script$1 = defineComponent({
-  name: "mxpButton",
+  name: "mxp-btn",
   props: {
     // Sizing
     width: Number,
@@ -27,16 +27,16 @@ var script$1 = defineComponent({
     computedClasses() {
       return {
         "px-8 py-2": !this.small,
-        "focus:ring-4": !this.text,
+        "focus:ring-4 focus:ring-blue-light": !this.text,
         // Rounded button
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         // Small button
         "px-3 py-1 text-xs": this.small,
         // text button
-        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-lightest": this.text && !this.filled && !this.stroke && !this.subtle,
+        "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-dim": this.text && !this.filled && !this.stroke && !this.subtle,
         // stroke button
-        "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-lightest bg-white text-blue": this.stroke && !this.filled && !this.text && !this.subtle,
+        "border-2 border-blue active:ring-inset active:ring-white active:bg-blue-lightest active:border-blue active:shadow-2xl active:shadow-inner hover:border-blue-dark hover:text-blue-dark focus:ring-4 focus:ring-blue-dim bg-white text-blue": this.stroke && !this.filled && !this.text && !this.subtle,
         // filled button
         "bg-blue text-white hover:bg-blue-dark active:bg-blue-dim active:ring-inset active:ring-blue active:shadow-2xl active:shadow-inner": this.filled && !this.stroke && !this.text && !this.subtle || this.default,
         // subtle button
