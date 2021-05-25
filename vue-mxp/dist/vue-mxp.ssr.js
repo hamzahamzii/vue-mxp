@@ -87,7 +87,7 @@ function _nonIterableRest() {
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         // Small button
-        "px-3 py-1 text-xs": this.small,
+        "px-3 py-1 text-sm": this.small,
         // text button
         "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-dim": this.text && !this.filled && !this.stroke && !this.subtle,
         // stroke button
@@ -138,7 +138,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     viewBox: "0 0 50 50"
   }, [_hoisted_1$1], 8, ["fill", "width", "height"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text ? (vue.openBlock(), vue.createBlock("span", _hoisted_2$1, "loading...")) : vue.createCommentVNode("", true)], 14, ["disabled"])]);
 }script$1.render = render$1;var script = vue.defineComponent({
-  name: "mxpTextInput",
+  name: "mxp-text-input",
   props: {
     // Sizing
     width: Number,
