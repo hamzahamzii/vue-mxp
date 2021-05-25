@@ -63,7 +63,7 @@ export default defineComponent({
     computedClasses(): any {
       return {
         // small inputs
-        "px-1 py-1": this.small,
+        "px-1 py-1 text-xs": this.small,
         "bg-green-100 border-2 border-green-500": this.successMessage,
         "bg-red-100 border-2 border-red-500": this.errorMessage,
         "bg-gray-100 border-none": this.disabled,

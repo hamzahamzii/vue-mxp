@@ -81,7 +81,7 @@ function _nonIterableRest() {
   computed: {
     computedClasses: function computedClasses() {
       return {
-        "px-5 py-2": !this.small,
+        "px-8 py-2": !this.small,
         "focus:ring-4": !this.text,
         // Rounded button
         "rounded-lg": this.rounded && !this.square && !this.text,
@@ -163,7 +163,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     computedClasses: function computedClasses() {
       return {
         // small inputs
-        "px-1 py-1": this.small,
+        "px-1 py-1 text-xs": this.small,
         "bg-green-100 border-2 border-green-500": this.successMessage,
         "bg-red-100 border-2 border-red-500": this.errorMessage,
         "bg-gray-100 border-none": this.disabled
@@ -201,15 +201,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     disabled: _ctx.disabled,
     width: _ctx.width,
     type: "text",
-    class: ["outline-none bg-gray-100 rounded-lg text-xs p-2 mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
+    class: ["outline-none bg-gray-100 rounded-lg p-2 mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
     style: _ctx.computedStyles
   }, null, 14, ["placeholder", "disabled", "width"])) : (vue.openBlock(), vue.createBlock("textarea", {
     key: 1,
     placeholder: _ctx.placeholder,
     disabled: _ctx.disabled,
-    class: ["outline-none rounded-lg bg-gray-100 text-xs mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
+    class: ["outline-none rounded-lg bg-gray-100 mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
     style: [{
-      "padding": "12px!important"
+      "padding": "12px !important"
     }, _ctx.computedStyles]
   }, null, 14, ["placeholder", "disabled"])), _ctx.caption ? (vue.openBlock(), vue.createBlock("small", _hoisted_2, vue.toDisplayString(_ctx.caption), 1)) : vue.createCommentVNode("", true), _ctx.successMessage ? (vue.openBlock(), vue.createBlock("small", _hoisted_3, vue.toDisplayString(_ctx.successMessage), 1)) : vue.createCommentVNode("", true), _ctx.errorMessage ? (vue.openBlock(), vue.createBlock("small", _hoisted_4, vue.toDisplayString(_ctx.errorMessage), 1)) : vue.createCommentVNode("", true)]);
 }script.render = render;/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
