@@ -4,6 +4,7 @@
       :style="computedStyles"
       :class="computedClasses"
       class="focus:outline-none m-2 flex justify-center align-center"
+      :disabled="disabled"
     >
       <!-- No loader -->
       <slot v-if="!loader"></slot>
@@ -48,6 +49,9 @@ export default defineComponent({
     filled: Boolean,
     stroke: Boolean,
     text: Boolean,
+
+    // Type
+    disabled: Boolean,
 
     // Icons
     loader: Boolean,
