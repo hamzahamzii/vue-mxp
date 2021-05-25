@@ -35,16 +35,25 @@ export default defineComponent({
           Filled<mxpButton square filled>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
+          Filled (loading)<mxpButton square loader filled>Button</mxpButton>
+        </div>
+        <div class="flex mx-2 flex-col items-center">
           Filled (disabled)<mxpButton square filled disabled>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
           Stroke<mxpButton square stroke>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
+          Stroke (loading)<mxpButton square loader stroke>Button</mxpButton>
+        </div>
+        <div class="flex mx-2 flex-col items-center">
           Stroke (disabled)<mxpButton square stroke disabled>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
           Subtle<mxpButton square subtle>Button</mxpButton>
+        </div>
+        <div class="flex mx-2 flex-col items-center">
+          Subtle (loading)<mxpButton square loader subtle>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
           Subtle (disabled)<mxpButton square subtle disabled>Button</mxpButton>
@@ -57,16 +66,25 @@ export default defineComponent({
           Filled<mxpButton rounded filled>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
+          Filled (loading)<mxpButton rounded loader filled>Button</mxpButton>
+        </div>
+        <div class="flex mx-2 flex-col items-center">
           Filled (disabled)<mxpButton rounded filled disabled>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
           Stroke<mxpButton rounded stroke>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
+          Stroke (loading)<mxpButton rounded loader stroke>Button</mxpButton>
+        </div>
+        <div class="flex mx-2 flex-col items-center">
           Stroke (disabled)<mxpButton rounded stroke disabled>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
           Subtle<mxpButton rounded subtle>Button</mxpButton>
+        </div>
+        <div class="flex mx-2 flex-col items-center">
+          Subtle (loading)<mxpButton rounded loader subtle>Button</mxpButton>
         </div>
         <div class="flex mx-2 flex-col items-center">
           Subtle (disabled)<mxpButton rounded subtle disabled>Button</mxpButton>
