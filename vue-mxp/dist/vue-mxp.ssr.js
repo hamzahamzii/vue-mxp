@@ -138,7 +138,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     viewBox: "0 0 50 50"
   }, [_hoisted_1$1], 8, ["fill", "width", "height"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text ? (vue.openBlock(), vue.createBlock("span", _hoisted_2$1, "loading...")) : vue.createCommentVNode("", true)], 14, ["disabled"])]);
 }script$1.render = render$1;var script = vue.defineComponent({
-  name: "mxp-text-input",
+  name: "mxpTextInput",
   props: {
     // Sizing
     width: Number,
@@ -151,22 +151,28 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     // Color options
     color: String,
     // Captions
-    caption: String,
-    successMessage: String,
-    errorMessage: String,
+    message: String,
+    success: Boolean,
+    error: Boolean,
     // Placeholder
     placeholder: String,
     // Icons
-    search: Boolean
+    search: Boolean,
+    username: Boolean
   },
   computed: {
     computedClasses: function computedClasses() {
       return {
         // small inputs
-        "px-1 py-1 text-xs": this.small,
-        "bg-green-100 border-2 border-green-500": this.successMessage,
-        "bg-red-100 border-2 border-red-500": this.errorMessage,
-        "bg-gray-100 border-none": this.disabled
+        "px-1 py-1": this.small,
+        // Success  input
+        "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this.success,
+        // Error input
+        "bg-red-100 border-2 border-red-500 focus:border-red-500  ": this.error,
+        // disabled input
+        "bg-gray-50 border-none": this.disabled,
+        // Icon input
+        "ml-0 pl-0 border-l-0 rounded-tl-none rounded-bl-none": (this.search || this.username) && !this.description
       };
     },
     // Size helper for small/normal button
@@ -179,40 +185,105 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
       };
     }
   }
-});var _hoisted_1 = {
+});var _withId = /*#__PURE__*/vue.withScopeId("data-v-539ece79");
+
+vue.pushScopeId("data-v-539ece79");
+
+var _hoisted_1 = {
   class: "flex flex-col"
 };
 var _hoisted_2 = {
-  key: 2,
-  class: "text-gray-500 mx-2"
+  key: 0,
+  class: "flex items-center"
 };
-var _hoisted_3 = {
-  key: 3,
-  class: "text-green-500 mx-2"
-};
-var _hoisted_4 = {
-  key: 4,
-  class: "text-red-500 mx-2"
-};
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return vue.openBlock(), vue.createBlock("div", _hoisted_1, [!_ctx.description ? (vue.openBlock(), vue.createBlock("input", {
+
+var _hoisted_3 = /*#__PURE__*/vue.createVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+}, null, -1);
+
+var _hoisted_4 = /*#__PURE__*/vue.createVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+}, null, -1);
+
+vue.popScopeId();
+
+var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
+  return vue.openBlock(), vue.createBlock("div", _hoisted_1, [!_ctx.description ? (vue.openBlock(), vue.createBlock("div", _hoisted_2, [_ctx.search ? (vue.openBlock(), vue.createBlock("svg", {
     key: 0,
+    xmlns: "http://www.w3.org/2000/svg",
+    class: ["h-19 w-9 p-2 bg-gray-100 rounded-tl-lg mt-2 rounded-bl-lg border-2 border-gray-50 border-r-0 ", {
+      'bg-red-100 border-red-500 ': _ctx.error,
+      'bg-green-100 border-green-500': _ctx.success
+    }],
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor"
+  }, [_hoisted_3], 2)) : vue.createCommentVNode("", true), _ctx.username ? (vue.openBlock(), vue.createBlock("svg", {
+    key: 1,
+    xmlns: "http://www.w3.org/2000/svg",
+    class: ["h-19 w-9 p-2 bg-gray-100 rounded-tl-lg mt-2 rounded-bl-lg border-2 border-gray-50 border-r-0 ", {
+      'bg-red-100 border-red-500 ': _ctx.error,
+      'bg-green-100 border-green-500': _ctx.success
+    }],
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor"
+  }, [_hoisted_4], 2)) : vue.createCommentVNode("", true), vue.createVNode("input", {
     placeholder: _ctx.placeholder,
     disabled: _ctx.disabled,
     width: _ctx.width,
     type: "text",
-    class: ["outline-none bg-gray-100 rounded-lg p-2 mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
+    class: ["outline-none inline bg-gray-100 rounded-lg text-xs w-full p-2 mx-2 mt-2 border-2 border-gray-50 focus:border-2 focus:border-black", _ctx.computedClasses],
     style: _ctx.computedStyles
-  }, null, 14, ["placeholder", "disabled", "width"])) : (vue.openBlock(), vue.createBlock("textarea", {
+  }, null, 14, ["placeholder", "disabled", "width"])])) : (vue.openBlock(), vue.createBlock("textarea", {
     key: 1,
     placeholder: _ctx.placeholder,
     disabled: _ctx.disabled,
-    class: ["outline-none rounded-lg bg-gray-100 mx-2 mt-2 active:border-2 border-black focus:border-2 border-black", _ctx.computedClasses],
+    class: ["outline-none rounded-lg bg-gray-100 text-xs mx-2 mt-2  border-2 border-gray-50 focus:border-2 focus:border-black", _ctx.computedClasses],
     style: [{
-      "padding": "12px !important"
+      "padding": "12px!important"
     }, _ctx.computedStyles]
-  }, null, 14, ["placeholder", "disabled"])), _ctx.caption ? (vue.openBlock(), vue.createBlock("small", _hoisted_2, vue.toDisplayString(_ctx.caption), 1)) : vue.createCommentVNode("", true), _ctx.successMessage ? (vue.openBlock(), vue.createBlock("small", _hoisted_3, vue.toDisplayString(_ctx.successMessage), 1)) : vue.createCommentVNode("", true), _ctx.errorMessage ? (vue.openBlock(), vue.createBlock("small", _hoisted_4, vue.toDisplayString(_ctx.errorMessage), 1)) : vue.createCommentVNode("", true)]);
-}script.render = render;/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
+  }, null, 14, ["placeholder", "disabled"])), _ctx.message ? (vue.openBlock(), vue.createBlock("small", {
+    key: 2,
+    class: ["text-gray-500 mx-2", {
+      'text-red-500': _ctx.error,
+      'text-green-500': _ctx.success
+    }]
+  }, vue.toDisplayString(_ctx.message), 3)) : vue.createCommentVNode("", true)]);
+});function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}var css_248z = ".search-icon[data-v-539ece79]{\n  position: absolute;\n}\n";
+styleInject(css_248z);script.render = render;
+script.__scopeId = "data-v-539ece79";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],
