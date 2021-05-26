@@ -151,13 +151,25 @@ export default defineComponent({
     <!-- Inputs -->
     <div class="flex justify-center" v-if="tab == 'inputs'">
       <div class="w-1/4 flex flex-col justify-center">
-        <mxpTextInput placeholder="Text field" />
+        <mxpTextInput  placeholder="Text field" />
         <mxpTextInput description placeholder="Text area" />
         <mxpTextInput
           placeholder="Success field"
-          successMessage="Success message"
+          message="Success message"
+          success
         />
-        <mxpTextInput placeholder="Error field" errorMessage="Error message" />
+        <mxpTextInput  placeholder="Error field" error message="Error message" />
+        <mxpTextInput  disabled placeholder="disabled"  message="message" />
+         
+         <!-- Search Inputs -->
+        <mxpTextInput search placeholder="Text field" />
+        <mxpTextInput
+          username
+          placeholder="Success field"
+          message="Success message"
+          success
+        />
+        <mxpTextInput username placeholder="Error field" error message="Error message" />
       </div>
     </div>
   </div>
