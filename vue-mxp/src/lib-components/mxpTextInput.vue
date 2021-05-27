@@ -167,6 +167,7 @@ export default defineComponent({
   position: absolute;
   top: 18.5px;
   pointer-events: none;
+  transition: all 0.25s ease-in-out;
 }
 
 .input-container input:focus ~ label {
@@ -179,8 +180,8 @@ export default defineComponent({
   text-align: left;
   color: #a0a3bd !important;
   position: absolute;
-  top: 4px;
+  transform: translateY(-14.5px);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease-in-out;
 }
 </style>
