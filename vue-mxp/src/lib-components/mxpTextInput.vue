@@ -3,7 +3,7 @@
     <!-- Text input -->
     <div
       v-if="!description"
-      class="flex input-container relative items-center px-6 bg-gray-100 rounded-xl"
+      class="flex relative items-center px-6 bg-gray-100 rounded-xl"
       :class="computedClasses"
     >
       <!-- Search icon -->
@@ -115,8 +115,8 @@ export default defineComponent({
     computedClasses(): any {
       return {
         // small inputs
-        "py-3": this.small,
-        "py-5": !this.small,
+        "py-3 input-container-sm": this.small,
+        "py-5 input-container": !this.small,
         // Success  input
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this
           .success,
@@ -181,6 +181,36 @@ export default defineComponent({
   color: #a0a3bd !important;
   position: absolute;
   transform: translateY(-14.5px);
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.input-container-sm label {
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: left;
+  color: #a0a3bd !important;
+  position: absolute;
+  top: 10.5px;
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.input-container-sm input:focus ~ label {
+  font-family: Graphik;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #a0a3bd !important;
+  position: absolute;
+  transform: translateY(-10.5px);
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }

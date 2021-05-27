@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <div class="w-1/4 my-2 flex flex-col justify-center">
-      <mxpTextInput class="my-2" placeholder="Text field" />
+      <mxpTextInput small class="my-2" placeholder="Text field" />
       <mxpTextInput class="my-2" description placeholder="Text area" />
       <mxpTextInput
         class="my-2"
