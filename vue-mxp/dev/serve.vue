@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="mt-10 mb-5">
+  <div id="app" class="my-5 p-2">
     <!-- Navbar -->
-    <div class="flex mb-8 items-center justify-center">
+    <div class="flex mb-4 items-center justify-center">
       <button class="mx-2 p-2" @click="tab = 'buttons'"><b>BUTTONS</b></button>
       <button class="mx-2 p-2" @click="tab = 'inputs'"><b>INPUTS</b></button>
     </div>

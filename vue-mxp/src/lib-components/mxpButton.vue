@@ -60,13 +60,13 @@ export default defineComponent({
   computed: {
     computedClasses(): any {
       return {
-        "px-8 py-2": !this.small,
+        "px-8 py-2 btn-font": !this.small,
         "focus:ring-4 focus:ring-blue-light": !this.text,
         // Rounded button
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         // Small button
-        "px-3 py-1 text-sm": this.small,
+        "px-5 py-1 btn-font-sm": this.small,
         // text button
         "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-dim":
           this.text && !this.filled && !this.stroke && !this.subtle,
@@ -103,3 +103,24 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.btn-font {
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 1.75px;
+  text-align: center;
+}
+.btn-font-sm {
+  font-family: Graphik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1.75px;
+  text-align: center;
+}
+</style>

@@ -81,13 +81,13 @@ function _nonIterableRest() {
   computed: {
     computedClasses: function computedClasses() {
       return {
-        "px-8 py-2": !this.small,
+        "px-8 py-2 btn-font": !this.small,
         "focus:ring-4 focus:ring-blue-light": !this.text,
         // Rounded button
         "rounded-lg": this.rounded && !this.square && !this.text,
         "rounded-none": this.square && !this.rounded && !this.text,
         // Small button
-        "px-3 py-1 text-sm": this.small,
+        "px-5 py-1 btn-font-sm": this.small,
         // text button
         "bg-white text-blue rounded-full hover:text-blue-dark focus:bg-blue-dim": this.text && !this.filled && !this.stroke && !this.subtle,
         // stroke button
@@ -114,7 +114,11 @@ function _nonIterableRest() {
       };
     }
   }
-});var _hoisted_1$1 = /*#__PURE__*/vue.createVNode("path", {
+});var _withId$1 = /*#__PURE__*/vue.withScopeId("data-v-15a8f384");
+
+vue.pushScopeId("data-v-15a8f384");
+
+var _hoisted_1$1 = /*#__PURE__*/vue.createVNode("path", {
   d: "M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"
 }, null, -1);
 
@@ -122,7 +126,10 @@ var _hoisted_2$1 = {
   key: 2,
   class: "text-blue"
 };
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+
+vue.popScopeId();
+
+var render$1 = /*#__PURE__*/_withId$1(function (_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode("button", {
     style: _ctx.computedStyles,
     class: [_ctx.computedClasses, "focus:outline-none m-2 flex justify-center align-center"],
@@ -137,7 +144,34 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     height: _ctx.scale,
     viewBox: "0 0 50 50"
   }, [_hoisted_1$1], 8, ["fill", "width", "height"])) : vue.createCommentVNode("", true), _ctx.loader && _ctx.text ? (vue.openBlock(), vue.createBlock("span", _hoisted_2$1, "loading...")) : vue.createCommentVNode("", true)], 14, ["disabled"])]);
-}script$1.render = render$1;var script = vue.defineComponent({
+});function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}var css_248z$1 = ".btn-font[data-v-15a8f384] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 28px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n\n.btn-font-sm[data-v-15a8f384] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 24px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n";
+styleInject(css_248z$1);script$1.render = render$1;
+script$1.__scopeId = "data-v-15a8f384";var script = vue.defineComponent({
   name: "mxpTextInput",
   props: {
     // Sizing
@@ -185,15 +219,9 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
       };
     }
   }
-<<<<<<< HEAD
-});var _withId = /*#__PURE__*/vue.withScopeId("data-v-6fca84cc");
+});var _withId = /*#__PURE__*/vue.withScopeId("data-v-5530bcea");
 
-vue.pushScopeId("data-v-6fca84cc");
-=======
-});var _withId = /*#__PURE__*/vue.withScopeId("data-v-539ece79");
-
-vue.pushScopeId("data-v-539ece79");
->>>>>>> 5e2d33b3883281147464011d8b3c77d7cdf7011f
+vue.pushScopeId("data-v-5530bcea");
 
 var _hoisted_1 = {
   class: "flex flex-col"
@@ -262,40 +290,9 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       'text-green-500': _ctx.success
     }]
   }, vue.toDisplayString(_ctx.message), 3)) : vue.createCommentVNode("", true)]);
-});function styleInject(css, ref) {
-  if ( ref === void 0 ) ref = {};
-  var insertAt = ref.insertAt;
-
-  if (!css || typeof document === 'undefined') { return; }
-
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-<<<<<<< HEAD
-}var css_248z = ".search-icon[data-v-6fca84cc] {\n  position: absolute;\n}\r\n";
+});var css_248z = ".search-icon[data-v-5530bcea] {\n  position: absolute;\n}\n";
 styleInject(css_248z);script.render = render;
-script.__scopeId = "data-v-6fca84cc";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
-=======
-}var css_248z = ".search-icon[data-v-539ece79]{\n  position: absolute;\n}\n";
-styleInject(css_248z);script.render = render;
-script.__scopeId = "data-v-539ece79";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
->>>>>>> 5e2d33b3883281147464011d8b3c77d7cdf7011f
+script.__scopeId = "data-v-5530bcea";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],

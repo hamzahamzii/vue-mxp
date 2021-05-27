@@ -8,4 +8,9 @@
   .test-class {
     background-color: red !important;
   }
+
+  @font-face {
+    font-family: Graphik;
+    src: url(fonts/Graphik-Regular.ttf);
+  }
 }
