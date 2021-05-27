@@ -153,19 +153,27 @@ var script = defineComponent({
     search: Boolean,
     username: Boolean
   },
+
+  data() {
+    return {
+      focused: false
+    };
+  },
+
   computed: {
     computedClasses() {
       return {
         // small inputs
-        "px-1 py-1": this.small,
+        "py-3": this.small,
+        "py-5": !this.small,
         // Success  input
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this.success,
         // Error input
         "bg-red-100 border-2 border-red-500 focus:border-red-500  ": this.error,
         // disabled input
         "bg-gray-50 border-none": this.disabled,
-        // Icon input
-        "ml-0 pl-0 border-l-0 rounded-tl-none rounded-bl-none": (this.search || this.username) && !this.description
+        "border-2 border-black": this.focused,
+        "border-2 border-gray-100": !this.focused
       };
     },
 
@@ -183,16 +191,22 @@ var script = defineComponent({
   }
 });
 
-const _withId = /*#__PURE__*/withScopeId("data-v-5530bcea");
+const _withId = /*#__PURE__*/withScopeId("data-v-0660aec9");
 
-pushScopeId("data-v-5530bcea");
+pushScopeId("data-v-0660aec9");
 
 const _hoisted_1 = {
   class: "flex flex-col"
 };
 const _hoisted_2 = {
   key: 0,
-  class: "flex items-center"
+  xmlns: "http://www.w3.org/2000/svg",
+  class: "bg-transparent mr-2",
+  fill: "none",
+  height: "21",
+  width: "21",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
 };
 
 const _hoisted_3 = /*#__PURE__*/createVNode("path", {
@@ -202,52 +216,51 @@ const _hoisted_3 = /*#__PURE__*/createVNode("path", {
   d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
 }, null, -1);
 
-const _hoisted_4 = /*#__PURE__*/createVNode("path", {
+const _hoisted_4 = {
+  key: 1,
+  xmlns: "http://www.w3.org/2000/svg",
+  class: "bg-transparent mr-2",
+  fill: "none",
+  height: "21",
+  width: "21",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
+};
+
+const _hoisted_5 = /*#__PURE__*/createVNode("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
   d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 }, null, -1);
 
+const _hoisted_6 = {
+  class: "input-placeholder top-0 -z-1 absolute w-full"
+};
+
 popScopeId();
 
 const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
-  return openBlock(), createBlock("div", _hoisted_1, [!_ctx.description ? (openBlock(), createBlock("div", _hoisted_2, [_ctx.search ? (openBlock(), createBlock("svg", {
+  return openBlock(), createBlock("div", _hoisted_1, [!_ctx.description ? (openBlock(), createBlock("div", {
     key: 0,
-    xmlns: "http://www.w3.org/2000/svg",
-    class: ["h-19 w-9 p-2 bg-gray-100 rounded-tl-lg mt-2 rounded-bl-lg border-2 border-gray-50 border-r-0 ", {
-      'bg-red-100 border-red-500 ': _ctx.error,
-      'bg-green-100 border-green-500': _ctx.success
-    }],
-    fill: "none",
-    viewBox: "0 0 24 24",
-    stroke: "currentColor"
-  }, [_hoisted_3], 2)) : createCommentVNode("", true), _ctx.username ? (openBlock(), createBlock("svg", {
-    key: 1,
-    xmlns: "http://www.w3.org/2000/svg",
-    class: ["h-19 w-9 p-2 bg-gray-100 rounded-tl-lg mt-2 rounded-bl-lg border-2 border-gray-50 border-r-0 ", {
-      'bg-red-100 border-red-500 ': _ctx.error,
-      'bg-green-100 border-green-500': _ctx.success
-    }],
-    fill: "none",
-    viewBox: "0 0 24 24",
-    stroke: "currentColor"
-  }, [_hoisted_4], 2)) : createCommentVNode("", true), createVNode("input", {
-    placeholder: _ctx.placeholder,
+    class: ["flex relative items-center px-6 bg-gray-100 rounded-xl", _ctx.computedClasses]
+  }, [_ctx.search ? (openBlock(), createBlock("svg", _hoisted_2, [_hoisted_3])) : createCommentVNode("", true), _ctx.username ? (openBlock(), createBlock("svg", _hoisted_4, [_hoisted_5])) : createCommentVNode("", true), createVNode("input", {
+    placeholder: "",
     disabled: _ctx.disabled,
     width: _ctx.width,
+    onFocus: _cache[1] || (_cache[1] = $event => _ctx.focused = true),
+    onBlur: _cache[2] || (_cache[2] = $event => _ctx.focused = false),
     type: "text",
-    class: ["outline-none inline bg-gray-100 rounded-lg text-xs w-full p-2 mx-2 mt-2 border-2 border-gray-50 focus:border-2 focus:border-black", _ctx.computedClasses],
-    style: _ctx.computedStyles
-  }, null, 14, ["placeholder", "disabled", "width"])])) : (openBlock(), createBlock("textarea", {
+    class: "outline-none bg-transparent block w-full appearance-none border-0 w-full"
+  }, null, 40, ["disabled", "width"]), createVNode("label", _hoisted_6, toDisplayString(_ctx.placeholder), 1)], 2)) : (openBlock(), createBlock("textarea", {
     key: 1,
     placeholder: _ctx.placeholder,
     disabled: _ctx.disabled,
-    class: ["outline-none rounded-lg bg-gray-100 text-xs mx-2 mt-2  border-2 border-gray-50 focus:border-2 focus:border-black", _ctx.computedClasses],
-    style: [{
-      "padding": "12px!important"
-    }, _ctx.computedStyles]
-  }, null, 14, ["placeholder", "disabled"])), _ctx.message ? (openBlock(), createBlock("small", {
+    class: ["outline-none px-6 input-placeholder rounded-xl bg-gray-100 focus:border-2 focus:border-black", _ctx.computedClasses],
+    style: _ctx.computedStyles,
+    onFocus: _cache[3] || (_cache[3] = $event => _ctx.focused = true),
+    onBlur: _cache[4] || (_cache[4] = $event => _ctx.focused = false)
+  }, null, 46, ["placeholder", "disabled"])), _ctx.message ? (openBlock(), createBlock("small", {
     key: 2,
     class: ["text-gray-500 mx-2", {
       'text-red-500': _ctx.error,
@@ -256,11 +269,11 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
   }, toDisplayString(_ctx.message), 3)) : createCommentVNode("", true)]);
 });
 
-var css_248z = ".search-icon[data-v-5530bcea] {\n  position: absolute;\n}\n";
+var css_248z = ".input-placeholder[data-v-0660aec9] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: relative;\n  right: ;\n}\n\n.input-placeholder-focused[data-v-0660aec9] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-5530bcea";
+script.__scopeId = "data-v-0660aec9";
 
 /* eslint-disable import/prefer-default-export */
 

@@ -5,18 +5,6 @@
       <mxpTextInput class="my-2" description placeholder="Text area" />
       <mxpTextInput
         class="my-2"
-        placeholder="Success field"
-        message="Success message"
-        success
-      />
-      <mxpTextInput
-        class="my-2"
-        placeholder="Error field"
-        error
-        message="Error message"
-      />
-      <mxpTextInput
-        class="my-2"
         disabled
         placeholder="disabled"
         message="message"

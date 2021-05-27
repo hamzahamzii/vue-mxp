@@ -3,7 +3,7 @@
     <!-- Text input -->
     <div
       v-if="!description"
-      class="flex items-center px-6 bg-gray-100 rounded-xl"
+      class="flex input-container relative items-center px-6 bg-gray-100 rounded-xl"
       :class="computedClasses"
     >
       <!-- Search icon -->
@@ -44,21 +44,23 @@
       </svg>
       <!-- Input field -->
       <input
-        :placeholder="placeholder"
         :disabled="disabled"
         :width="width"
         @focus="focused = true"
         @blur="focused = false"
         type="text"
-        class="outline-none text-input-placeholder bg-transparent border-0 w-full"
+        class="outline-none bg-transparent w-full"
       />
+      <label :class="search || username ? 'left-14' : ''">{{
+        placeholder
+      }}</label>
     </div>
     <!-- Text area -->
     <textarea
       v-else
       :placeholder="placeholder"
       :disabled="disabled"
-      class="outline-none px-6 text-input-placeholder rounded-xl bg-gray-100 focus:border-2 focus:border-black"
+      class="outline-none px-6 rounded-xl bg-gray-100 focus:border-2 focus:border-black"
       :style="computedStyles"
       :class="computedClasses"
       @focus="focused = true"
@@ -138,11 +140,22 @@ export default defineComponent({
       };
     },
   },
+  watch: {
+    focus(value) {
+      if (value) {
+        let elem = document.getElementById("label-transition");
+        if (elem) {
+          console.log("elem found");
+          elem.style.animationName = "example";
+        }
+      }
+    },
+  },
 });
 </script>
 
 <style scoped>
-.text-input-placeholder {
+.input-container label {
   font-family: Graphik;
   font-size: 16px;
   font-style: normal;
@@ -150,5 +163,24 @@ export default defineComponent({
   line-height: 28px;
   letter-spacing: 0.75px;
   text-align: left;
+  color: #a0a3bd !important;
+  position: absolute;
+  top: 18.5px;
+  pointer-events: none;
+}
+
+.input-container input:focus ~ label {
+  font-family: Graphik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #a0a3bd !important;
+  position: absolute;
+  top: 4px;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 </style>
