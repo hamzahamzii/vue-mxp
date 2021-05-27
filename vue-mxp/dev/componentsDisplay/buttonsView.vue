@@ -1,6 +1,6 @@
 <template>
   <!-- Square -->
-  <div class="flex items-center justify-center m-2">
+  <div class="flex text-sm items-center justify-center m-2">
     <b>Square</b>
     <div class="flex mx-2 flex-col items-center">
       Filled<mxpButton square filled>Button</mxpButton>
@@ -32,7 +32,7 @@
   </div>
   <hr />
   <!-- Rounded -->
-  <div class="flex items-center justify-center m-2">
+  <div class="flex text-sm items-center justify-center m-2">
     <b>Rounded</b>
     <div class="flex mx-2 flex-col items-center">
       Filled<mxpButton rounded filled>Button</mxpButton>
@@ -64,7 +64,7 @@
   </div>
   <hr />
   <!-- Small square -->
-  <div class="flex items-center justify-center m-2">
+  <div class="flex text-sm items-center justify-center m-2">
     <b>Small square</b>
     <div class="flex mx-2 flex-col items-center">
       Filled<mxpButton square small filled>Button</mxpButton>
@@ -102,7 +102,7 @@
   </div>
   <hr />
   <!-- Small rounded -->
-  <div class="flex items-center justify-center m-2">
+  <div class="flex text-sm items-center justify-center m-2">
     <b>Small rounded</b>
     <div class="flex mx-2 flex-col items-center">
       Filled<mxpButton rounded small filled>Button</mxpButton>
