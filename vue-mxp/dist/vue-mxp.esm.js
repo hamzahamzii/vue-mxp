@@ -145,9 +145,15 @@ var script = defineComponent({
   }
 });
 
+<<<<<<< HEAD
 const _withId = /*#__PURE__*/withScopeId("data-v-6fca84cc");
 
 pushScopeId("data-v-6fca84cc");
+=======
+const _withId = /*#__PURE__*/withScopeId("data-v-539ece79");
+
+pushScopeId("data-v-539ece79");
+>>>>>>> 5e2d33b3883281147464011d8b3c77d7cdf7011f
 
 const _hoisted_1 = {
   class: "flex flex-col"
@@ -245,11 +251,19 @@ function styleInject(css, ref) {
   }
 }
 
+<<<<<<< HEAD
 var css_248z = ".search-icon[data-v-6fca84cc] {\n  position: absolute;\n}\r\n";
 styleInject(css_248z);
 
 script.render = render;
 script.__scopeId = "data-v-6fca84cc";
+=======
+var css_248z = ".search-icon[data-v-539ece79]{\n  position: absolute;\n}\n";
+styleInject(css_248z);
+
+script.render = render;
+script.__scopeId = "data-v-539ece79";
+>>>>>>> 5e2d33b3883281147464011d8b3c77d7cdf7011f
 
 /* eslint-disable import/prefer-default-export */
 
