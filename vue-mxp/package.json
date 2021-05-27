@@ -1,6 +1,6 @@
 {
   "name": "vue-mxp",
-  "version": "1.1.9",
+  "version": "1.2.2",
   "description": "",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",

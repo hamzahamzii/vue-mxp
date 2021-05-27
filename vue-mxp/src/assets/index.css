@@ -32064,6 +32064,10 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+.test-class {
+  background-color: red !important;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
