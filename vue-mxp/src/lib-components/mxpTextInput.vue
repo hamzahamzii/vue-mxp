@@ -1,17 +1,19 @@
 <template>
   <div class="flex flex-col">
     <!-- Text input -->
-    <!-- Search icon -->
-    <div v-if="!description" class="flex items-center">
+    <div
+      v-if="!description"
+      class="flex items-center px-6 bg-gray-100 rounded-xl"
+      :class="computedClasses"
+    >
+      <!-- Search icon -->
       <svg
         v-if="search"
         xmlns="http://www.w3.org/2000/svg"
-        class="h-19 w-9 p-2 bg-gray-100 rounded-tl-lg mt-2 rounded-bl-lg border-2 border-gray-50 border-r-0 "
-        :class="{
-          'bg-red-100 border-red-500 ': error,
-          'bg-green-100 border-green-500': success,
-        }"
+        class="bg-transparent mr-2"
         fill="none"
+        height="21"
+        width="21"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
@@ -26,12 +28,10 @@
       <svg
         v-if="username"
         xmlns="http://www.w3.org/2000/svg"
-        class="h-19 w-9 p-2 bg-gray-100 rounded-tl-lg mt-2 rounded-bl-lg border-2 border-gray-50 border-r-0 "
-        :class="{
-          'bg-red-100 border-red-500 ': error,
-          'bg-green-100 border-green-500': success,
-        }"
+        class="bg-transparent mr-2"
         fill="none"
+        height="21"
+        width="21"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
@@ -47,10 +47,10 @@
         :placeholder="placeholder"
         :disabled="disabled"
         :width="width"
+        @focus="focused = true"
+        @blur="focused = false"
         type="text"
-        class="outline-none inline bg-gray-100 rounded-lg text-xs w-full p-2 mx-2 mt-2 border-2 border-gray-50 focus:border-2 focus:border-black"
-        :style="computedStyles"
-        :class="computedClasses"
+        class="outline-none text-input-placeholder bg-transparent border-0 w-full"
       />
     </div>
     <!-- Text area -->
@@ -58,10 +58,11 @@
       v-else
       :placeholder="placeholder"
       :disabled="disabled"
-      class="outline-none rounded-lg bg-gray-100 text-xs mx-2 mt-2  border-2 border-gray-50 focus:border-2 focus:border-black"
-      style="padding:12px!important "
+      class="outline-none px-6 text-input-placeholder rounded-xl bg-gray-100 focus:border-2 focus:border-black"
       :style="computedStyles"
       :class="computedClasses"
+      @focus="focused = true"
+      @blur="focused = false"
     ></textarea>
     <!-- Caption -->
     <small
@@ -103,12 +104,17 @@ export default defineComponent({
     search: Boolean,
     username: Boolean,
   },
-
+  data() {
+    return {
+      focused: false,
+    };
+  },
   computed: {
     computedClasses(): any {
       return {
         // small inputs
-        "px-1 py-1": this.small,
+        "py-3": this.small,
+        "py-5": !this.small,
         // Success  input
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this
           .success,
@@ -116,9 +122,8 @@ export default defineComponent({
         "bg-red-100 border-2 border-red-500 focus:border-red-500  ": this.error,
         // disabled input
         "bg-gray-50 border-none": this.disabled,
-        // Icon input
-        "ml-0 pl-0 border-l-0 rounded-tl-none rounded-bl-none":
-          (this.search || this.username) && !this.description,
+        "border-2 border-black": this.focused,
+        "border-2 border-gray-100": !this.focused,
       };
     },
 
@@ -135,8 +140,15 @@ export default defineComponent({
   },
 });
 </script>
+
 <style scoped>
-.search-icon {
-  position: absolute;
+.text-input-placeholder {
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: left;
 }
 </style>
