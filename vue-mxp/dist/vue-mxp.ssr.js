@@ -203,8 +203,8 @@ script$1.__scopeId = "data-v-15a8f384";var script = vue.defineComponent({
     computedClasses: function computedClasses() {
       return {
         // small inputs
-        "py-3": this.small,
-        "py-5": !this.small,
+        "py-3 input-container-sm": this.small,
+        "py-5 input-container": !this.small,
         // Success  input
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this.success,
         // Error input
@@ -237,9 +237,9 @@ script$1.__scopeId = "data-v-15a8f384";var script = vue.defineComponent({
       }
     }
   }
-});var _withId = /*#__PURE__*/vue.withScopeId("data-v-a2e95d6c");
+});var _withId = /*#__PURE__*/vue.withScopeId("data-v-0e41c514");
 
-vue.pushScopeId("data-v-a2e95d6c");
+vue.pushScopeId("data-v-0e41c514");
 
 var _hoisted_1 = {
   class: "flex flex-col"
@@ -285,7 +285,7 @@ vue.popScopeId();
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", _hoisted_1, [!_ctx.description ? (vue.openBlock(), vue.createBlock("div", {
     key: 0,
-    class: ["flex input-container relative items-center px-6 bg-gray-100 rounded-xl", _ctx.computedClasses]
+    class: ["flex relative items-center px-6 bg-gray-100 rounded-xl", _ctx.computedClasses]
   }, [_ctx.search ? (vue.openBlock(), vue.createBlock("svg", _hoisted_2, [_hoisted_3])) : vue.createCommentVNode("", true), _ctx.username ? (vue.openBlock(), vue.createBlock("svg", _hoisted_4, [_hoisted_5])) : vue.createCommentVNode("", true), vue.createVNode("input", {
     disabled: _ctx.disabled,
     width: _ctx.width,
@@ -318,9 +318,9 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       'text-green-500': _ctx.success
     }]
   }, vue.toDisplayString(_ctx.message), 3)) : vue.createCommentVNode("", true)]);
-});var css_248z = ".input-container label[data-v-a2e95d6c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 18.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-a2e95d6c] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-14.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
+});var css_248z = ".input-container label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 18.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-14.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 10.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-10.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
 styleInject(css_248z);script.render = render;
-script.__scopeId = "data-v-a2e95d6c";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
+script.__scopeId = "data-v-0e41c514";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$1,mxpTextInput: script});var install = function installVueMxp(app) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],

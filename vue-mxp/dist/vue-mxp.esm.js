@@ -164,8 +164,8 @@ var script = defineComponent({
     computedClasses() {
       return {
         // small inputs
-        "py-3": this.small,
-        "py-5": !this.small,
+        "py-3 input-container-sm": this.small,
+        "py-5 input-container": !this.small,
         // Success  input
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this.success,
         // Error input
@@ -204,9 +204,9 @@ var script = defineComponent({
   }
 });
 
-const _withId = /*#__PURE__*/withScopeId("data-v-a2e95d6c");
+const _withId = /*#__PURE__*/withScopeId("data-v-0e41c514");
 
-pushScopeId("data-v-a2e95d6c");
+pushScopeId("data-v-0e41c514");
 
 const _hoisted_1 = {
   class: "flex flex-col"
@@ -252,7 +252,7 @@ popScopeId();
 const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
   return openBlock(), createBlock("div", _hoisted_1, [!_ctx.description ? (openBlock(), createBlock("div", {
     key: 0,
-    class: ["flex input-container relative items-center px-6 bg-gray-100 rounded-xl", _ctx.computedClasses]
+    class: ["flex relative items-center px-6 bg-gray-100 rounded-xl", _ctx.computedClasses]
   }, [_ctx.search ? (openBlock(), createBlock("svg", _hoisted_2, [_hoisted_3])) : createCommentVNode("", true), _ctx.username ? (openBlock(), createBlock("svg", _hoisted_4, [_hoisted_5])) : createCommentVNode("", true), createVNode("input", {
     disabled: _ctx.disabled,
     width: _ctx.width,
@@ -279,11 +279,11 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
   }, toDisplayString(_ctx.message), 3)) : createCommentVNode("", true)]);
 });
 
-var css_248z = ".input-container label[data-v-a2e95d6c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 18.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-a2e95d6c] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-14.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
+var css_248z = ".input-container label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 18.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-14.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 10.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-10.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-a2e95d6c";
+script.__scopeId = "data-v-0e41c514";
 
 /* eslint-disable import/prefer-default-export */
 
