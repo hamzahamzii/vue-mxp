@@ -2,13 +2,12 @@
   <div class="flex flex-col">
     <!-- Text input -->
     <div
-      v-if="!description"
-      class="flex relative items-center px-6 bg-gray-100 rounded-xl"
+      class="flex relative px-4 bg-gray-100 rounded-xl"
       :class="computedClasses"
     >
       <!-- Search icon -->
       <svg
-        v-if="search"
+        v-if="search && !description"
         xmlns="http://www.w3.org/2000/svg"
         class="bg-transparent mr-2"
         fill="none"
@@ -26,7 +25,7 @@
       </svg>
       <!-- user icon -->
       <svg
-        v-if="username"
+        v-if="username && !description"
         xmlns="http://www.w3.org/2000/svg"
         class="bg-transparent mr-2"
         fill="none"
@@ -44,28 +43,33 @@
       </svg>
       <!-- Input field -->
       <input
+        v-if="!description"
         :disabled="disabled"
         :width="width"
         @focus="focused = true"
         @blur="focused = false"
         type="text"
         class="outline-none bg-transparent w-full"
+        required
+        v-model="inputContent"
       />
-      <label :class="search || username ? 'left-14' : ''">{{
+      <!-- Text area -->
+      <textarea
+        v-else
+        :disabled="disabled"
+        class="outline-none bg-transparent w-full"
+        @focus="focused = true"
+        @blur="focused = false"
+        v-model="inputContent"
+        required
+      ></textarea>
+      <label class="text-gray-300" :class="{'left-11': (search || username) , 'text-green-500': success, 'text-red-500': error}">{{
         placeholder
       }}</label>
+      <svg  v-if="inputContent" @click="inputContent = ''" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer ..."  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
     </div>
-    <!-- Text area -->
-    <textarea
-      v-else
-      :placeholder="placeholder"
-      :disabled="disabled"
-      class="outline-none px-6 rounded-xl bg-gray-100 focus:border-2 focus:border-black"
-      :style="computedStyles"
-      :class="computedClasses"
-      @focus="focused = true"
-      @blur="focused = false"
-    ></textarea>
     <!-- Caption -->
     <small
       v-if="message"
@@ -109,6 +113,7 @@ export default defineComponent({
   data() {
     return {
       focused: false,
+      inputContent:'',
     };
   },
   computed: {
@@ -121,11 +126,13 @@ export default defineComponent({
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this
           .success,
         // Error input
-        "bg-red-100 border-2 border-red-500 focus:border-red-500  ": this.error,
+        "bg-red-100 border-2 border-red-500 focus:border-red-500": this.error,
         // disabled input
         "bg-gray-50 border-none": this.disabled,
         "border-2 border-black": this.focused,
         "border-2 border-gray-100": !this.focused,
+        "items-start":this.description,
+        "items-center":!this.description,
       };
     },
 
@@ -163,14 +170,16 @@ export default defineComponent({
   line-height: 28px;
   letter-spacing: 0.75px;
   text-align: left;
-  color: #a0a3bd !important;
   position: absolute;
   top: 18.5px;
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
 
-.input-container input:focus ~ label {
+.input-container input:focus ~ label, 
+.input-container input:valid ~ label,
+.input-container textarea:focus ~ label, 
+.input-container textarea:valid ~ label {
   font-family: Graphik;
   font-size: 14px;
   font-style: normal;
@@ -178,7 +187,6 @@ export default defineComponent({
   line-height: 22px;
   letter-spacing: 0.25px;
   text-align: left;
-  color: #a0a3bd !important;
   position: absolute;
   transform: translateY(-14.5px);
   pointer-events: none;
@@ -193,14 +201,16 @@ export default defineComponent({
   line-height: 28px;
   letter-spacing: 0.75px;
   text-align: left;
-  color: #a0a3bd !important;
   position: absolute;
   top: 10.5px;
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
 
-.input-container-sm input:focus ~ label {
+.input-container-sm input:focus ~ label,
+.input-container-sm input:valid ~ label,
+.input-container-sm textarea:focus ~ label, 
+.input-container-sm textarea:valid ~ label {
   font-family: Graphik;
   font-size: 13px;
   font-style: normal;
@@ -208,7 +218,6 @@ export default defineComponent({
   line-height: 22px;
   letter-spacing: 0.25px;
   text-align: left;
-  color: #a0a3bd !important;
   position: absolute;
   transform: translateY(-10.5px);
   pointer-events: none;
