@@ -2,7 +2,7 @@
   <!-- Square -->
   <div class="flex text-sm items-center justify-center m-2">
     <b>Square</b>
-    <div class="flex mx-2 flex-col items-center">
+    <div class="flex mx-2 flex-col items-center ">
       Filled<mxpButton square filled>Button</mxpButton>
     </div>
     <div class="flex mx-2 flex-col items-center">

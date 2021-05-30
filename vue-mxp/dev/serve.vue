@@ -4,6 +4,7 @@
     <div class="flex mb-4 items-center justify-center">
       <button class="mx-2 p-2" @click="tab = 'buttons'"><b>BUTTONS</b></button>
       <button class="mx-2 p-2" @click="tab = 'inputs'"><b>INPUTS</b></button>
+      <button class="mx-2 p-2" @click="tab = 'colorsTypography'"><b>Colors and Typography</b></button>
     </div>
     <hr />
 
@@ -12,6 +13,9 @@
 
     <!-- Inputs -->
     <inputsView v-if="tab == 'inputs'" />
+
+    <!-- Colors and Typography -->
+    <colorsTypography v-if="tab == 'colorsTypography'" />
   </div>
 </template>
 
@@ -20,12 +24,15 @@ import { defineComponent } from "vue";
 // Uncomment import and local "components" registration if library is not registered globally.
 import buttonsView from "./componentsDisplay/buttonsView.vue";
 import inputsView from "./componentsDisplay/inputsView.vue";
+import colorsTypography from "./componentsDisplay/colorsTypography.vue";
+
 
 export default defineComponent({
   name: "ServeDev",
   components: {
     buttonsView,
     inputsView,
+    colorsTypography
   },
   data(): any {
     return {
