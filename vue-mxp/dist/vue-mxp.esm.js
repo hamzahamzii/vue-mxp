@@ -1,4 +1,4 @@
-import { defineComponent, pushScopeId, popScopeId, openBlock, createBlock, createVNode, renderSlot, createCommentVNode, withScopeId, toDisplayString } from 'vue';
+import { defineComponent, pushScopeId, popScopeId, openBlock, createBlock, createVNode, renderSlot, createCommentVNode, withScopeId, withDirectives, vModelText, toDisplayString } from 'vue';
 
 var script$1 = defineComponent({
   name: "mxp-btn",
@@ -65,9 +65,9 @@ var script$1 = defineComponent({
   }
 });
 
-const _withId$1 = /*#__PURE__*/withScopeId("data-v-15a8f384");
+const _withId$1 = /*#__PURE__*/withScopeId("data-v-36c79f76");
 
-pushScopeId("data-v-15a8f384");
+pushScopeId("data-v-36c79f76");
 
 const _hoisted_1$1 = /*#__PURE__*/createVNode("path", {
   d: "M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"
@@ -124,11 +124,11 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$1 = ".btn-font[data-v-15a8f384] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 28px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n\n.btn-font-sm[data-v-15a8f384] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 24px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n";
+var css_248z$1 = ".btn-font[data-v-36c79f76] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 28px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n\n.btn-font-sm[data-v-36c79f76] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 24px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\r\n";
 styleInject(css_248z$1);
 
 script$1.render = render$1;
-script$1.__scopeId = "data-v-15a8f384";
+script$1.__scopeId = "data-v-36c79f76";
 
 var script = defineComponent({
   name: "mxpTextInput",
@@ -156,7 +156,8 @@ var script = defineComponent({
 
   data() {
     return {
-      focused: false
+      focused: false,
+      inputContent: ''
     };
   },
 
@@ -169,11 +170,13 @@ var script = defineComponent({
         // Success  input
         "bg-green-100 border-2 border-green-500 focus:border-green-500 :": this.success,
         // Error input
-        "bg-red-100 border-2 border-red-500 focus:border-red-500  ": this.error,
+        "bg-red-100 border-2 border-red-500 focus:border-red-500": this.error,
         // disabled input
         "bg-gray-50 border-none": this.disabled,
         "border-2 border-black": this.focused,
-        "border-2 border-gray-100": !this.focused
+        "border-2 border-gray-100": !this.focused,
+        "items-start": this.description,
+        "items-center": !this.description
       };
     },
 
@@ -204,9 +207,9 @@ var script = defineComponent({
   }
 });
 
-const _withId = /*#__PURE__*/withScopeId("data-v-0e41c514");
+const _withId = /*#__PURE__*/withScopeId("data-v-5fba84fe");
 
-pushScopeId("data-v-0e41c514");
+pushScopeId("data-v-5fba84fe");
 
 const _hoisted_1 = {
   class: "flex flex-col"
@@ -247,31 +250,52 @@ const _hoisted_5 = /*#__PURE__*/createVNode("path", {
   d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 }, null, -1);
 
+const _hoisted_6 = /*#__PURE__*/createVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M6 18L18 6M6 6l12 12"
+}, null, -1);
+
 popScopeId();
 
 const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
-  return openBlock(), createBlock("div", _hoisted_1, [!_ctx.description ? (openBlock(), createBlock("div", {
-    key: 0,
-    class: ["flex relative items-center px-6 bg-gray-100 rounded-xl", _ctx.computedClasses]
-  }, [_ctx.search ? (openBlock(), createBlock("svg", _hoisted_2, [_hoisted_3])) : createCommentVNode("", true), _ctx.username ? (openBlock(), createBlock("svg", _hoisted_4, [_hoisted_5])) : createCommentVNode("", true), createVNode("input", {
+  return openBlock(), createBlock("div", _hoisted_1, [createVNode("div", {
+    class: ["flex relative px-4 bg-gray-100 rounded-xl", _ctx.computedClasses]
+  }, [_ctx.search && !_ctx.description ? (openBlock(), createBlock("svg", _hoisted_2, [_hoisted_3])) : createCommentVNode("", true), _ctx.username && !_ctx.description ? (openBlock(), createBlock("svg", _hoisted_4, [_hoisted_5])) : createCommentVNode("", true), !_ctx.description ? withDirectives((openBlock(), createBlock("input", {
+    key: 2,
     disabled: _ctx.disabled,
     width: _ctx.width,
     onFocus: _cache[1] || (_cache[1] = $event => _ctx.focused = true),
     onBlur: _cache[2] || (_cache[2] = $event => _ctx.focused = false),
     type: "text",
-    class: "outline-none bg-transparent w-full"
-  }, null, 40, ["disabled", "width"]), createVNode("label", {
-    class: _ctx.search || _ctx.username ? 'left-14' : ''
-  }, toDisplayString(_ctx.placeholder), 3)], 2)) : (openBlock(), createBlock("textarea", {
-    key: 1,
-    placeholder: _ctx.placeholder,
+    class: "outline-none bg-transparent w-full",
+    required: "",
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => _ctx.inputContent = $event)
+  }, null, 40, ["disabled", "width"])), [[vModelText, _ctx.inputContent]]) : withDirectives((openBlock(), createBlock("textarea", {
+    key: 3,
     disabled: _ctx.disabled,
-    class: ["outline-none px-6 rounded-xl bg-gray-100 focus:border-2 focus:border-black", _ctx.computedClasses],
-    style: _ctx.computedStyles,
-    onFocus: _cache[3] || (_cache[3] = $event => _ctx.focused = true),
-    onBlur: _cache[4] || (_cache[4] = $event => _ctx.focused = false)
-  }, null, 46, ["placeholder", "disabled"])), _ctx.message ? (openBlock(), createBlock("small", {
-    key: 2,
+    class: "outline-none bg-transparent w-full",
+    onFocus: _cache[4] || (_cache[4] = $event => _ctx.focused = true),
+    onBlur: _cache[5] || (_cache[5] = $event => _ctx.focused = false),
+    "onUpdate:modelValue": _cache[6] || (_cache[6] = $event => _ctx.inputContent = $event),
+    required: ""
+  }, null, 40, ["disabled"])), [[vModelText, _ctx.inputContent]]), createVNode("label", {
+    class: ["text-gray-300", {
+      'left-11': _ctx.search || _ctx.username,
+      'text-green-500': _ctx.success,
+      'text-red-500': _ctx.error
+    }]
+  }, toDisplayString(_ctx.placeholder), 3), _ctx.inputContent ? (openBlock(), createBlock("svg", {
+    key: 4,
+    onClick: _cache[7] || (_cache[7] = $event => _ctx.inputContent = ''),
+    xmlns: "http://www.w3.org/2000/svg",
+    class: "h-6 w-6 cursor-pointer ...",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor"
+  }, [_hoisted_6])) : createCommentVNode("", true)], 2), _ctx.message ? (openBlock(), createBlock("small", {
+    key: 0,
     class: ["text-gray-500 mx-2", {
       'text-red-500': _ctx.error,
       'text-green-500': _ctx.success
@@ -279,11 +303,11 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
   }, toDisplayString(_ctx.message), 3)) : createCommentVNode("", true)]);
 });
 
-var css_248z = ".input-container label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 18.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-14.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  top: 10.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-0e41c514] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  color: #a0a3bd !important;\n  position: absolute;\n  transform: translateY(-10.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
+var css_248z = ".input-container label[data-v-5fba84fe] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 18.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-5fba84fe], \r\n.input-container input:valid ~ label[data-v-5fba84fe],\r\n.input-container textarea:focus ~ label[data-v-5fba84fe], \r\n.input-container textarea:valid ~ label[data-v-5fba84fe] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-14.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-5fba84fe] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 10.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-5fba84fe],\r\n.input-container-sm input:valid ~ label[data-v-5fba84fe],\r\n.input-container-sm textarea:focus ~ label[data-v-5fba84fe], \r\n.input-container-sm textarea:valid ~ label[data-v-5fba84fe] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-10.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\r\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-0e41c514";
+script.__scopeId = "data-v-5fba84fe";
 
 /* eslint-disable import/prefer-default-export */
 

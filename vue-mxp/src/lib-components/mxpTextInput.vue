@@ -63,7 +63,7 @@
         v-model="inputContent"
         required
       ></textarea>
-      <label class="text-gray-300" :class="{'left-11': (search || username) , 'text-green-500': success, 'text-red-500': error}">{{
+      <label class="text-gray-400" :class="{'left-11': (search || username) , 'text-green-500': success, 'text-red-500': error}">{{
         placeholder
       }}</label>
       <svg  v-if="inputContent" @click="inputContent = ''" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer ..."  fill="none" viewBox="0 0 24 24" stroke="currentColor">
