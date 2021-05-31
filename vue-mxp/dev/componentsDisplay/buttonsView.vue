@@ -1,4 +1,5 @@
 <template>
+  <!-- Buttons -->
   <!-- Square -->
   <div class="flex text-sm items-center justify-center m-2">
     <b>Square</b>
@@ -138,6 +139,7 @@
       >
     </div>
   </div>
+
 </template>
 
 <script lang="ts">

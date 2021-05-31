@@ -15,17 +15,17 @@
     color: #4e4b66;
   }
   a:active {
-    color: red;
+    color: #14142b;
   }
   label {
     color: #6e7191;
   }
-  ::placeholder {
-    color: red;
+  input::placeholder {
+    color: #a0a3bd;
   }
-  input {
+  /* input {
     background-color: #eff3f6;
-  }
+  } */
 
   /* Background Color classes */
   .primary {
