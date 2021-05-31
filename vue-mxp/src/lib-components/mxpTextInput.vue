@@ -49,7 +49,7 @@
         @focus="focused = true"
         @blur="focused = false"
         type="text"
-        class="outline-none bg-transparent w-full"
+        class="outline-none mt-1 bg-transparent w-full"
         required
         v-model="inputContent"
       />
@@ -63,11 +63,30 @@
         v-model="inputContent"
         required
       ></textarea>
-      <label class="text-gray-400" :class="{'left-11': (search || username) , 'text-green-500': success, 'text-red-500': error}">{{
-        placeholder
-      }}</label>
-      <svg  v-if="inputContent" @click="inputContent = ''" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer ..."  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <label
+        class="text-gray-400"
+        :class="{
+          'left-11': search || username,
+          'text-green-500': success,
+          'text-red-500': error,
+        }"
+        >{{ placeholder }}</label
+      >
+      <svg
+        v-if="inputContent"
+        @click="inputContent = ''"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 cursor-pointer ..."
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
       </svg>
     </div>
     <!-- Caption -->
@@ -113,7 +132,7 @@ export default defineComponent({
   data() {
     return {
       focused: false,
-      inputContent:'',
+      inputContent: "",
     };
   },
   computed: {
@@ -131,8 +150,8 @@ export default defineComponent({
         "bg-gray-50 border-none": this.disabled,
         "border-2 border-black": this.focused,
         "border-2 border-gray-100": !this.focused,
-        "items-start":this.description,
-        "items-center":!this.description,
+        "items-start": this.description,
+        "items-center": !this.description,
       };
     },
 
@@ -171,14 +190,14 @@ export default defineComponent({
   letter-spacing: 0.75px;
   text-align: left;
   position: absolute;
-  top: 18.5px;
+  top: 19.5px;
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
 
-.input-container input:focus ~ label, 
+.input-container input:focus ~ label,
 .input-container input:valid ~ label,
-.input-container textarea:focus ~ label, 
+.input-container textarea:focus ~ label,
 .input-container textarea:valid ~ label {
   font-family: Graphik;
   font-size: 14px;
@@ -188,7 +207,7 @@ export default defineComponent({
   letter-spacing: 0.25px;
   text-align: left;
   position: absolute;
-  transform: translateY(-14.5px);
+  transform: translateY(-15.5px);
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
@@ -202,14 +221,14 @@ export default defineComponent({
   letter-spacing: 0.75px;
   text-align: left;
   position: absolute;
-  top: 10.5px;
+  top: 12.5px;
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
 
 .input-container-sm input:focus ~ label,
 .input-container-sm input:valid ~ label,
-.input-container-sm textarea:focus ~ label, 
+.input-container-sm textarea:focus ~ label,
 .input-container-sm textarea:valid ~ label {
   font-family: Graphik;
   font-size: 13px;
@@ -219,7 +238,7 @@ export default defineComponent({
   letter-spacing: 0.25px;
   text-align: left;
   position: absolute;
-  transform: translateY(-10.5px);
+  transform: translateY(-11px);
   pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
