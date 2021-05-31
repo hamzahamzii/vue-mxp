@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex w-full flex-col">
     <!-- Text input -->
     <div
       class="flex relative px-4 bg-gray-100 rounded-xl"
@@ -64,11 +64,12 @@
         required
       ></textarea>
       <label
-        class="text-gray-400 w-3/4 truncate"
+        class="text-gray-400 truncate"
         :class="{
-          'left-11': search || username,
+          'left-11 w-3/4': search || username,
           'text-green-500': success,
           'text-red-500': error,
+          'w-1/2': !search && !username,
         }"
         >{{ placeholder }}</label
       >

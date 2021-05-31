@@ -207,12 +207,12 @@ var script$2 = defineComponent({
   }
 });
 
-const _withId$2 = /*#__PURE__*/withScopeId("data-v-28e1f60e");
+const _withId$2 = /*#__PURE__*/withScopeId("data-v-46df831c");
 
-pushScopeId("data-v-28e1f60e");
+pushScopeId("data-v-46df831c");
 
 const _hoisted_1$2 = {
-  class: "flex flex-col"
+  class: "flex w-full sm:w-full md:w-1/2 lg:w-1/4 flex-col"
 };
 const _hoisted_2 = {
   key: 0,
@@ -281,10 +281,11 @@ const render$2 = /*#__PURE__*/_withId$2((_ctx, _cache, $props, $setup, $data, $o
     "onUpdate:modelValue": _cache[6] || (_cache[6] = $event => _ctx.inputContent = $event),
     required: ""
   }, null, 40, ["disabled"])), [[vModelText, _ctx.inputContent]]), createVNode("label", {
-    class: ["text-gray-400 w-3/4 truncate", {
-      'left-11': _ctx.search || _ctx.username,
+    class: ["text-gray-400 truncate", {
+      'left-11 w-3/4': _ctx.search || _ctx.username,
       'text-green-500': _ctx.success,
-      'text-red-500': _ctx.error
+      'text-red-500': _ctx.error,
+      'w-1/2': !_ctx.search && !_ctx.username
     }]
   }, toDisplayString(_ctx.placeholder), 3), _ctx.inputContent ? (openBlock(), createBlock("svg", {
     key: 4,
@@ -303,11 +304,11 @@ const render$2 = /*#__PURE__*/_withId$2((_ctx, _cache, $props, $setup, $data, $o
   }, toDisplayString(_ctx.message), 3)) : createCommentVNode("", true)]);
 });
 
-var css_248z$2 = ".input-container label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 19.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-28e1f60e],\n.input-container input:valid ~ label[data-v-28e1f60e],\n.input-container textarea:focus ~ label[data-v-28e1f60e],\n.input-container textarea:valid ~ label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-15.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 12.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-28e1f60e],\n.input-container-sm input:valid ~ label[data-v-28e1f60e],\n.input-container-sm textarea:focus ~ label[data-v-28e1f60e],\n.input-container-sm textarea:valid ~ label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-11px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
+var css_248z$2 = ".input-container label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 19.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-46df831c],\n.input-container input:valid ~ label[data-v-46df831c],\n.input-container textarea:focus ~ label[data-v-46df831c],\n.input-container textarea:valid ~ label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-15.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 12.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-46df831c],\n.input-container-sm input:valid ~ label[data-v-46df831c],\n.input-container-sm textarea:focus ~ label[data-v-46df831c],\n.input-container-sm textarea:valid ~ label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-11px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
 styleInject(css_248z$2);
 
 script$2.render = render$2;
-script$2.__scopeId = "data-v-28e1f60e";
+script$2.__scopeId = "data-v-46df831c";
 
 var script$1 = defineComponent({
   name: "mxp-check-box",

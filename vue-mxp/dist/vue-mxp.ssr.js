@@ -240,12 +240,12 @@ script$3.__scopeId = "data-v-15a8f384";var script$2 = vue.defineComponent({
       }
     }
   }
-});var _withId$2 = /*#__PURE__*/vue.withScopeId("data-v-28e1f60e");
+});var _withId$2 = /*#__PURE__*/vue.withScopeId("data-v-46df831c");
 
-vue.pushScopeId("data-v-28e1f60e");
+vue.pushScopeId("data-v-46df831c");
 
 var _hoisted_1$2 = {
-  class: "flex flex-col"
+  class: "flex w-full sm:w-full md:w-1/2 lg:w-1/4 flex-col"
 };
 var _hoisted_2 = {
   key: 0,
@@ -326,10 +326,11 @@ var render$2 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $d
     }),
     required: ""
   }, null, 40, ["disabled"])), [[vue.vModelText, _ctx.inputContent]]), vue.createVNode("label", {
-    class: ["text-gray-400 w-3/4 truncate", {
-      'left-11': _ctx.search || _ctx.username,
+    class: ["text-gray-400 truncate", {
+      'left-11 w-3/4': _ctx.search || _ctx.username,
       'text-green-500': _ctx.success,
-      'text-red-500': _ctx.error
+      'text-red-500': _ctx.error,
+      'w-1/2': !_ctx.search && !_ctx.username
     }]
   }, vue.toDisplayString(_ctx.placeholder), 3), _ctx.inputContent ? (vue.openBlock(), vue.createBlock("svg", {
     key: 4,
@@ -348,9 +349,9 @@ var render$2 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $d
       'text-green-500': _ctx.success
     }]
   }, vue.toDisplayString(_ctx.message), 3)) : vue.createCommentVNode("", true)]);
-});var css_248z$2 = ".input-container label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 19.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-28e1f60e],\n.input-container input:valid ~ label[data-v-28e1f60e],\n.input-container textarea:focus ~ label[data-v-28e1f60e],\n.input-container textarea:valid ~ label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-15.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 12.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-28e1f60e],\n.input-container-sm input:valid ~ label[data-v-28e1f60e],\n.input-container-sm textarea:focus ~ label[data-v-28e1f60e],\n.input-container-sm textarea:valid ~ label[data-v-28e1f60e] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-11px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
+});var css_248z$2 = ".input-container label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 19.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-46df831c],\n.input-container input:valid ~ label[data-v-46df831c],\n.input-container textarea:focus ~ label[data-v-46df831c],\n.input-container textarea:valid ~ label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-15.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 12.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-46df831c],\n.input-container-sm input:valid ~ label[data-v-46df831c],\n.input-container-sm textarea:focus ~ label[data-v-46df831c],\n.input-container-sm textarea:valid ~ label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-11px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
 styleInject(css_248z$2);script$2.render = render$2;
-script$2.__scopeId = "data-v-28e1f60e";var script$1 = vue.defineComponent({
+script$2.__scopeId = "data-v-46df831c";var script$1 = vue.defineComponent({
   name: "mxp-check-box",
   props: {
     // Type
