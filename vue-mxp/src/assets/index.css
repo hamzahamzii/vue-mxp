@@ -32076,14 +32076,210 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
-.test-class {
-  background-color: red !important;
-}
+/* font-family */
 
 @font-face {
   font-family: Graphik;
 
   src: url(fonts/Graphik-Regular.ttf);
+}
+
+/* Element color classes */
+
+body {
+  color: #4e4b66;
+}
+
+a:active {
+  color: #14142b;
+}
+
+label {
+  color: #6e7191;
+}
+
+input:-ms-input-placeholder {
+  color: #a0a3bd;
+}
+
+input::placeholder {
+  color: #a0a3bd;
+}
+
+/* input {
+    background-color: #eff3f6;
+  } */
+
+/* Background Color classes */
+
+.primary {
+  background: #2db6f5;
+}
+
+.secondary {
+  background: #5f2eea;
+}
+
+.error {
+  background: #ed2e7e;
+}
+
+.warning {
+  background: #f4b740;
+}
+
+.gradient-primary {
+  background: linear-gradient(114.44deg, #008cdb 0%, #8da5fc 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(114.44deg, #5f2eea 0%, #50ddc3 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(114.44deg, #eb0055 0%, #fffa80 100%);
+}
+
+/* Typography classes */
+
+.display-large {
+  font-family: Graphik;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 83px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.display-large-bold {
+  font-family: Graphik;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.display-medium {
+  font-family: Graphik;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 61px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.display-medium-bold {
+  font-family: Graphik;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.display-small {
+  font-family: Graphik;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.display-small-bold {
+  font-family: Graphik;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-large {
+  font-family: Graphik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-medium {
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-small {
+  font-family: Graphik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-x-small {
+  font-family: Graphik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.link-large {
+  font-family: Graphik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.link-medium {
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.link-small {
+  font-family: Graphik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.link-x-small {
+  font-family: Graphik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 @media (min-width: 640px) {
