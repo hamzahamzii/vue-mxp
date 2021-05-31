@@ -64,7 +64,7 @@
         required
       ></textarea>
       <label
-        class="text-gray-400"
+        class="text-gray-400 w-3/4 truncate"
         :class="{
           'left-11': search || username,
           'text-green-500': success,
@@ -92,7 +92,7 @@
     <!-- Caption -->
     <small
       v-if="message"
-      class="text-gray-500 mx-2"
+      class="text-gray-500 mx-2 w-3/4 truncate"
       :class="{ 'text-red-500': error, 'text-green-500': success }"
       >{{ message }}</small
     >
