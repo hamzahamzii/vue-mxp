@@ -41,6 +41,14 @@
           d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
         />
       </svg>
+      <!-- Email icon -->
+      <svg v-if="email && !description" xmlns="http://www.w3.org/2000/svg" height="21" width="21" class="bg-transparent mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      <!-- password icon -->
+      <svg v-if="pass && !description" xmlns="http://www.w3.org/2000/svg" height="21" width="21" class="bg-transparent mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
       <!-- Input field -->
       <input
         v-if="!description"
@@ -66,7 +74,7 @@
       <label
         class="text-gray-400 truncate"
         :class="{
-          'left-11 w-3/4': search || username,
+          'left-11 w-3/4': search || username || email || pass,
           'text-green-500': success,
           'text-red-500': error,
           'w-1/2': !search && !username,
@@ -130,6 +138,8 @@ export default defineComponent({
     // Icons
     search: Boolean,
     username: Boolean,
+    email: Boolean,
+    pass: Boolean
   },
   data() {
     return {
