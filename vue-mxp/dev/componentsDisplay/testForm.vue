@@ -1,8 +1,8 @@
 <template>
-  <div class="flex w-1/2 flex-col px-2">
-    <h1 class="display-medium-bold m-4">Signup</h1>
+<h1 class="display-medium-bold m-4">Signup</h1>
+  <div class="w-1/2 px-2 flex flex-col justify-center">
     <mxpTextInput class="mb-2" username small placeholder="User name" />
     <mxpTextInput username small placeholder="Password" />
-    <mxpButton class="float-right" rounded filled>Signup</mxpButton>
+    <mxpButton rounded filled>Signup</mxpButton>
   </div>
 </template>

@@ -3,7 +3,7 @@
     <button
       :style="computedStyles"
       :class="computedClasses"
-      class="focus:outline-none m-2 flex justify-center align-center"
+      class="focus:outline-none m-2 flex justify-center align-center w-full sm:w-auto"
       :disabled="disabled"
     >
       <!-- No loader -->

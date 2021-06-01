@@ -57,7 +57,7 @@
       <textarea
         v-else
         :disabled="disabled"
-        class="outline-none bg-transparent w-full"
+        class="outline-none bg-transparent w-full "
         @focus="focused = true"
         @blur="focused = false"
         v-model="inputContent"
