@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full flex-col">
+  <div class="flex w-full rounded-xl flex-col">
     <!-- Text input -->
     <div
       class="flex relative px-4 bg-gray-100 rounded-xl"
@@ -48,7 +48,7 @@
         :width="width"
         @focus="focused = true"
         @blur="focused = false"
-        type="text"
+        :type="type"
         class="outline-none mt-1 bg-transparent w-full"
         required
         v-model="inputContent"
@@ -111,6 +111,7 @@ export default defineComponent({
     small: Boolean,
 
     // Type
+    type: String,
     rounded: Boolean,
     description: Boolean,
     disabled: Boolean,

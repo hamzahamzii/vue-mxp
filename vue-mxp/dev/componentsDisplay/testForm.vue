@@ -1,8 +1,21 @@
 <template>
 <h1 class="display-medium-bold m-4">Signup</h1>
-  <div class="w-1/2 px-2 flex flex-col justify-center">
-    <mxpTextInput class="mb-2" username small placeholder="User name" />
-    <mxpTextInput username small placeholder="Password" />
-    <mxpButton rounded filled>Signup</mxpButton>
+  <div class="w-1/3  p-10 m-3 shadow-2xl rounded-lg">
+    <mxpTextInput class="my-4 shadow-md" username small placeholder="User name" />
+    <mxpTextInput class="my-4 shadow-md" username small placeholder="Email" />
+    <mxpTextInput type="Password" class="my-4 shadow-md" username small placeholder="Password" />
+    <div class="flex my-4">
+    <mxpRadioButton ></mxpRadioButton>
+    <small class="my-1 mx-1">Male</small>
+    <mxpRadioButton class="mx-1"></mxpRadioButton>
+    <small class="my-1 mx-1">Female</small>
+    </div>
+    <div class="flex my-4">
+      <mxpCheckBox></mxpCheckBox>
+      <small class="my-1 mx-1">I accept all the terms and conditions.</small>
+    </div>
+    
+
+    <mxpButton class="float-right my-3" rounded filled>Signup</mxpButton>
   </div>
 </template>
