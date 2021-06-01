@@ -114,9 +114,9 @@ function _nonIterableRest() {
       };
     }
   }
-});var _withId$3 = /*#__PURE__*/vue.withScopeId("data-v-15a8f384");
+});var _withId$3 = /*#__PURE__*/vue.withScopeId("data-v-dec52bc2");
 
-vue.pushScopeId("data-v-15a8f384");
+vue.pushScopeId("data-v-dec52bc2");
 
 var _hoisted_1$3 = /*#__PURE__*/vue.createVNode("path", {
   d: "M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"
@@ -132,7 +132,7 @@ vue.popScopeId();
 var render$3 = /*#__PURE__*/_withId$3(function (_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode("button", {
     style: _ctx.computedStyles,
-    class: [_ctx.computedClasses, "focus:outline-none m-2 flex justify-center align-center"],
+    class: [_ctx.computedClasses, "focus:outline-none m-2 flex justify-center align-center w-full sm:w-auto"],
     disabled: _ctx.disabled
   }, [!_ctx.loader ? vue.renderSlot(_ctx.$slots, "default", {
     key: 0
@@ -169,9 +169,9 @@ var render$3 = /*#__PURE__*/_withId$3(function (_ctx, _cache, $props, $setup, $d
   } else {
     style.appendChild(document.createTextNode(css));
   }
-}var css_248z$3 = ".btn-font[data-v-15a8f384] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 28px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n\n.btn-font-sm[data-v-15a8f384] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 24px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n";
+}var css_248z$3 = ".btn-font[data-v-dec52bc2] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 28px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\n\n.btn-font-sm[data-v-dec52bc2] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 24px;\n  letter-spacing: 1.75px;\n  text-align: center;\n}\r\n";
 styleInject(css_248z$3);script$3.render = render$3;
-script$3.__scopeId = "data-v-15a8f384";var script$2 = vue.defineComponent({
+script$3.__scopeId = "data-v-dec52bc2";var script$2 = vue.defineComponent({
   name: "mxpTextInput",
   props: {
     // Sizing
@@ -179,6 +179,7 @@ script$3.__scopeId = "data-v-15a8f384";var script$2 = vue.defineComponent({
     maxWidth: Number,
     small: Boolean,
     // Type
+    type: String,
     rounded: Boolean,
     description: Boolean,
     disabled: Boolean,
@@ -192,7 +193,9 @@ script$3.__scopeId = "data-v-15a8f384";var script$2 = vue.defineComponent({
     placeholder: String,
     // Icons
     search: Boolean,
-    username: Boolean
+    username: Boolean,
+    email: Boolean,
+    pass: Boolean
   },
   data: function data() {
     return {
@@ -240,12 +243,12 @@ script$3.__scopeId = "data-v-15a8f384";var script$2 = vue.defineComponent({
       }
     }
   }
-});var _withId$2 = /*#__PURE__*/vue.withScopeId("data-v-46df831c");
+});var _withId$2 = /*#__PURE__*/vue.withScopeId("data-v-43892d24");
 
-vue.pushScopeId("data-v-46df831c");
+vue.pushScopeId("data-v-43892d24");
 
 var _hoisted_1$2 = {
-  class: "flex w-full sm:w-full md:w-1/2 lg:w-1/4 flex-col"
+  class: "flex w-full rounded-xl flex-col"
 };
 var _hoisted_2 = {
   key: 0,
@@ -283,7 +286,43 @@ var _hoisted_5 = /*#__PURE__*/vue.createVNode("path", {
   d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 }, null, -1);
 
-var _hoisted_6 = /*#__PURE__*/vue.createVNode("path", {
+var _hoisted_6 = {
+  key: 2,
+  xmlns: "http://www.w3.org/2000/svg",
+  height: "21",
+  width: "21",
+  class: "bg-transparent mr-2",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
+};
+
+var _hoisted_7 = /*#__PURE__*/vue.createVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+}, null, -1);
+
+var _hoisted_8 = {
+  key: 3,
+  xmlns: "http://www.w3.org/2000/svg",
+  height: "21",
+  width: "21",
+  class: "bg-transparent mr-2",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
+};
+
+var _hoisted_9 = /*#__PURE__*/vue.createVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+}, null, -1);
+
+var _hoisted_10 = /*#__PURE__*/vue.createVNode("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
@@ -295,8 +334,8 @@ vue.popScopeId();
 var render$2 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock("div", _hoisted_1$2, [vue.createVNode("div", {
     class: ["flex relative px-4 bg-gray-100 rounded-xl", _ctx.computedClasses]
-  }, [_ctx.search && !_ctx.description ? (vue.openBlock(), vue.createBlock("svg", _hoisted_2, [_hoisted_3])) : vue.createCommentVNode("", true), _ctx.username && !_ctx.description ? (vue.openBlock(), vue.createBlock("svg", _hoisted_4, [_hoisted_5])) : vue.createCommentVNode("", true), !_ctx.description ? vue.withDirectives((vue.openBlock(), vue.createBlock("input", {
-    key: 2,
+  }, [_ctx.search && !_ctx.description ? (vue.openBlock(), vue.createBlock("svg", _hoisted_2, [_hoisted_3])) : vue.createCommentVNode("", true), _ctx.username && !_ctx.description ? (vue.openBlock(), vue.createBlock("svg", _hoisted_4, [_hoisted_5])) : vue.createCommentVNode("", true), _ctx.email && !_ctx.description ? (vue.openBlock(), vue.createBlock("svg", _hoisted_6, [_hoisted_7])) : vue.createCommentVNode("", true), _ctx.pass && !_ctx.description ? (vue.openBlock(), vue.createBlock("svg", _hoisted_8, [_hoisted_9])) : vue.createCommentVNode("", true), !_ctx.description ? vue.withDirectives((vue.openBlock(), vue.createBlock("input", {
+    key: 4,
     disabled: _ctx.disabled,
     width: _ctx.width,
     onFocus: _cache[1] || (_cache[1] = function ($event) {
@@ -305,16 +344,16 @@ var render$2 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $d
     onBlur: _cache[2] || (_cache[2] = function ($event) {
       return _ctx.focused = false;
     }),
-    type: "text",
+    type: _ctx.type,
     class: "outline-none mt-1 bg-transparent w-full",
     required: "",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return _ctx.inputContent = $event;
     })
-  }, null, 40, ["disabled", "width"])), [[vue.vModelText, _ctx.inputContent]]) : vue.withDirectives((vue.openBlock(), vue.createBlock("textarea", {
-    key: 3,
+  }, null, 40, ["disabled", "width", "type"])), [[vue.vModelDynamic, _ctx.inputContent]]) : vue.withDirectives((vue.openBlock(), vue.createBlock("textarea", {
+    key: 5,
     disabled: _ctx.disabled,
-    class: "outline-none bg-transparent w-full",
+    class: "outline-none bg-transparent w-full ",
     onFocus: _cache[4] || (_cache[4] = function ($event) {
       return _ctx.focused = true;
     }),
@@ -327,13 +366,13 @@ var render$2 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $d
     required: ""
   }, null, 40, ["disabled"])), [[vue.vModelText, _ctx.inputContent]]), vue.createVNode("label", {
     class: ["text-gray-400 truncate", {
-      'left-11 w-3/4': _ctx.search || _ctx.username,
+      'left-11 w-3/4': _ctx.search || _ctx.username || _ctx.email || _ctx.pass,
       'text-green-500': _ctx.success,
       'text-red-500': _ctx.error,
       'w-1/2': !_ctx.search && !_ctx.username
     }]
   }, vue.toDisplayString(_ctx.placeholder), 3), _ctx.inputContent ? (vue.openBlock(), vue.createBlock("svg", {
-    key: 4,
+    key: 6,
     onClick: _cache[7] || (_cache[7] = function ($event) {
       return _ctx.inputContent = '';
     }),
@@ -342,24 +381,24 @@ var render$2 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $d
     fill: "none",
     viewBox: "0 0 24 24",
     stroke: "currentColor"
-  }, [_hoisted_6])) : vue.createCommentVNode("", true)], 2), _ctx.message ? (vue.openBlock(), vue.createBlock("small", {
+  }, [_hoisted_10])) : vue.createCommentVNode("", true)], 2), _ctx.message ? (vue.openBlock(), vue.createBlock("small", {
     key: 0,
     class: ["text-gray-500 mx-2 w-3/4 truncate", {
       'text-red-500': _ctx.error,
       'text-green-500': _ctx.success
     }]
   }, vue.toDisplayString(_ctx.message), 3)) : vue.createCommentVNode("", true)]);
-});var css_248z$2 = ".input-container label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 19.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-46df831c],\n.input-container input:valid ~ label[data-v-46df831c],\n.input-container textarea:focus ~ label[data-v-46df831c],\n.input-container textarea:valid ~ label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-15.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 12.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-46df831c],\n.input-container-sm input:valid ~ label[data-v-46df831c],\n.input-container-sm textarea:focus ~ label[data-v-46df831c],\n.input-container-sm textarea:valid ~ label[data-v-46df831c] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-11px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n";
+});var css_248z$2 = ".input-container label[data-v-43892d24] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 19.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container input:focus ~ label[data-v-43892d24],\r\n.input-container input:valid ~ label[data-v-43892d24],\r\n.input-container textarea:focus ~ label[data-v-43892d24],\r\n.input-container textarea:valid ~ label[data-v-43892d24] {\n  font-family: Graphik;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-15.5px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm label[data-v-43892d24] {\n  font-family: Graphik;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.75px;\n  text-align: left;\n  position: absolute;\n  top: 12.5px;\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\n\n.input-container-sm input:focus ~ label[data-v-43892d24],\r\n.input-container-sm input:valid ~ label[data-v-43892d24],\r\n.input-container-sm textarea:focus ~ label[data-v-43892d24],\r\n.input-container-sm textarea:valid ~ label[data-v-43892d24] {\n  font-family: Graphik;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 22px;\n  letter-spacing: 0.25px;\n  text-align: left;\n  position: absolute;\n  transform: translateY(-11px);\n  pointer-events: none;\n  transition: all 0.25s ease-in-out;\n}\r\n";
 styleInject(css_248z$2);script$2.render = render$2;
-script$2.__scopeId = "data-v-46df831c";var script$1 = vue.defineComponent({
+script$2.__scopeId = "data-v-43892d24";var script$1 = vue.defineComponent({
   name: "mxp-check-box",
   props: {
     // Type
     disabled: Boolean
   }
-});var _withId$1 = /*#__PURE__*/vue.withScopeId("data-v-11af35e3");
+});var _withId$1 = /*#__PURE__*/vue.withScopeId("data-v-ec86c656");
 
-vue.pushScopeId("data-v-11af35e3");
+vue.pushScopeId("data-v-ec86c656");
 
 var _hoisted_1$1 = {
   class: "container"
@@ -378,9 +417,9 @@ var render$1 = /*#__PURE__*/_withId$1(function (_ctx, _cache, $props, $setup, $d
       'opacity-40': _ctx.disabled
     }, "checkmark absolute cursor-pointer rounded-full top-0 left-0 bg-gray-300 hover:bg-gray-400"]
   }, null, 2)])]);
-});var css_248z$1 = "/* The container */\n\n.container[data-v-11af35e3] {\n  display: block;\n  position: relative;\n  padding-left: 35px;\n  margin-bottom: 12px;\n  font-size: 22px;\n}\n\n/* Create a custom checkbox */\n\n.checkmark[data-v-11af35e3] {\n  height: 32px;\n  width: 32px;\n}\n\n/* When the checkbox is checked, add a blue background */\n\n.container input:checked ~ .checkmark[data-v-11af35e3] {\n  background-color: #2DB6F5;\n}\n\n.container input:checked ~ .checkmark[data-v-11af35e3]:hover {\n  background-color: #008CDB;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n\n.checkmark[data-v-11af35e3]:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the checkmark when checked */\n\n.container input:checked ~ .checkmark[data-v-11af35e3]:after {\n  display: block;\n}\n\n/* Style the checkmark/indicator */\n\n.container .checkmark[data-v-11af35e3]:after {\n  left: 12px;\n  top: 7px;\n  width: 7px;\n  height: 14px;\n  border: solid white;\n  border-width: 0 2px 2px 0;\n  /* border-radius: 50%; */\n  transform: rotate(45deg);\n}\n ";
+});var css_248z$1 = "/* The container */\n\n.container[data-v-ec86c656] {\n  display: block;\n  position: relative;\n  padding-left: 35px;\n  margin-bottom: 12px;\n  font-size: 22px;\n}\n\n/* Create a custom checkbox */\n\n.checkmark[data-v-ec86c656] {\n  height: 32px;\n  width: 32px;\n}\n\n/* When the checkbox is checked, add a blue background */\n\n.container input:checked ~ .checkmark[data-v-ec86c656] {\n  background-color: #2DB6F5;\n}\n\n.container input:checked ~ .checkmark[data-v-ec86c656]:hover {\n  background-color: #008CDB;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n\n.checkmark[data-v-ec86c656]:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the checkmark when checked */\n\n.container input:checked ~ .checkmark[data-v-ec86c656]:after {\n  display: block;\n}\n\n/* Style the checkmark/indicator */\n\n.container .checkmark[data-v-ec86c656]:after {\n  left: 12px;\n  top: 7px;\n  width: 7px;\n  height: 14px;\n  border: solid white;\n  border-width: 0 2px 2px 0;\n  /* border-radius: 50%; */\n  transform: rotate(45deg);\n}\r\n ";
 styleInject(css_248z$1);script$1.render = render$1;
-script$1.__scopeId = "data-v-11af35e3";var script = vue.defineComponent({
+script$1.__scopeId = "data-v-ec86c656";var script = vue.defineComponent({
   name: "mxp-check-box",
   props: {
     // Type
@@ -388,9 +427,9 @@ script$1.__scopeId = "data-v-11af35e3";var script = vue.defineComponent({
     // Checked
     checked: Boolean
   }
-});var _withId = /*#__PURE__*/vue.withScopeId("data-v-07f3384b");
+});var _withId = /*#__PURE__*/vue.withScopeId("data-v-1d708333");
 
-vue.pushScopeId("data-v-07f3384b");
+vue.pushScopeId("data-v-1d708333");
 
 var _hoisted_1 = {
   class: "container"
@@ -410,9 +449,9 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       'opacity-40': _ctx.disabled
     }, "checkmark cursor-pointer absolute top-0 left-0 rounded-full bg-gray-300 hover:bg-gray-400"]
   }, null, 2)])]);
-});var css_248z = "/* The container */\n\n.container[data-v-07f3384b] {\n  display: block;\n  position: relative;\n  padding-left: 35px;\n  margin-bottom: 12px;\n  font-size: 22px;\n}\n\n/* Create a custom radio button */\n\n.checkmark[data-v-07f3384b] {\n  height: 32px;\n  width: 32px;\n}\n\n/* When the radio button is checked, add a blue background */\n\n.container input:checked ~ .checkmark[data-v-07f3384b] {\n  background-color: #2DB6F5;\n}\n\n.container input:checked ~ .checkmark[data-v-07f3384b]:hover {\n  background-color: #008CDB;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n.checkmark[data-v-07f3384b]:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n\n.container input:checked ~ .checkmark[data-v-07f3384b]:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n\n.container .checkmark[data-v-07f3384b]:after {\n  top: 8px;\n  left: 8px;\n  width: 16px;\n  height: 16px;\n  border-radius: 50%;\n  background: white;\n}\n ";
+});var css_248z = "/* The container */\n\n.container[data-v-1d708333] {\n  display: block;\n  position: relative;\n  padding-left: 35px;\n  margin-bottom: 12px;\n  font-size: 22px;\n}\n\n/* Create a custom radio button */\n\n.checkmark[data-v-1d708333] {\n  height: 32px;\n  width: 32px;\n}\n\n/* When the radio button is checked, add a blue background */\n\n.container input:checked ~ .checkmark[data-v-1d708333] {\n  background-color: #2DB6F5;\n}\n\n.container input:checked ~ .checkmark[data-v-1d708333]:hover {\n  background-color: #008CDB;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n.checkmark[data-v-1d708333]:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n\n.container input:checked ~ .checkmark[data-v-1d708333]:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n\n.container .checkmark[data-v-1d708333]:after {\n  top: 8px;\n  left: 8px;\n  width: 16px;\n  height: 16px;\n  border-radius: 50%;\n  background: white;\n}\r\n ";
 styleInject(css_248z);script.render = render;
-script.__scopeId = "data-v-07f3384b";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$3,mxpTextInput: script$2,mxpCheckBox: script$1,mxpRadioButton: script});var install = function installVueMxp(app) {
+script.__scopeId = "data-v-1d708333";/* eslint-disable import/prefer-default-export */var components$1=/*#__PURE__*/Object.freeze({__proto__:null,mxpButton: script$3,mxpTextInput: script$2,mxpCheckBox: script$1,mxpRadioButton: script});var install = function installVueMxp(app) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],
