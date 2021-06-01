@@ -25,6 +25,6 @@
       <mxpCheckBox></mxpCheckBox>
       <small class="my-1 mx-1">I accept all the terms and conditions.</small>
     </div>
-    <mxpButton class="" rounded filled>Signup</mxpButton>
+    <mxpButton class="sm:float-right" rounded filled>Signup</mxpButton>
   </div>
 </template>
