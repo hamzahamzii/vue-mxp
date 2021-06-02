@@ -9,21 +9,21 @@
       <img
         v-if="search && !description"
         class="bg-transparent mr-2"
-        src="../assets/icons/search-black.svg"
+        src="../assets/icons/search.svg"
         alt=""
       />
       <!-- user icon -->
       <img
         v-if="username && !description"
         class="bg-transparent mr-2"
-        src="../assets/icons/user-black.svg"
+        src="../assets/icons/user.svg"
         alt=""
       />
       <!-- Email icon -->
       <img
         class="bg-transparent mr-2"
         v-if="email && !description"
-        src="../assets/icons/envelope-black.svg"
+        src="../assets/icons/envelope.svg"
         alt=""
       />
 
