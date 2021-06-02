@@ -6,31 +6,35 @@
       :class="computedClasses"
     >
       <!-- Search icon -->
-      <svg
+      <img
         v-if="search && !description"
-        xmlns="http://www.w3.org/2000/svg"
         class="bg-transparent mr-2"
-        fill="none"
-        height="21"
-        width="21"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-        />
-      </svg>
+        src="../assets/icons/search-black.svg"
+        alt=""
+      />
       <!-- user icon -->
-      <svg
+      <img
         v-if="username && !description"
-        xmlns="http://www.w3.org/2000/svg"
         class="bg-transparent mr-2"
-        fill="none"
+        src="../assets/icons/user-black.svg"
+        alt=""
+      />
+      <!-- Email icon -->
+      <img
+        class="bg-transparent mr-2"
+        v-if="email && !description"
+        src="../assets/icons/envelope-black.svg"
+        alt=""
+      />
+
+      <!-- password icon -->
+      <svg
+        v-if="pass && !description"
+        xmlns="http://www.w3.org/2000/svg"
         height="21"
         width="21"
+        class="bg-transparent mr-2"
+        fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
@@ -38,16 +42,8 @@
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
         />
-      </svg>
-      <!-- Email icon -->
-      <svg v-if="email && !description" xmlns="http://www.w3.org/2000/svg" height="21" width="21" class="bg-transparent mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-      <!-- password icon -->
-      <svg v-if="pass && !description" xmlns="http://www.w3.org/2000/svg" height="21" width="21" class="bg-transparent mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
       <!-- Input field -->
       <input
@@ -65,7 +61,7 @@
       <textarea
         v-else
         :disabled="disabled"
-        class="outline-none bg-transparent w-full "
+        class="outline-none bg-transparent w-full"
         @focus="focused = true"
         @blur="focused = false"
         v-model="inputContent"
@@ -139,7 +135,7 @@ export default defineComponent({
     search: Boolean,
     username: Boolean,
     email: Boolean,
-    pass: Boolean
+    pass: Boolean,
   },
   data() {
     return {
