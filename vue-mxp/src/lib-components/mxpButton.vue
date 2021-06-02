@@ -8,7 +8,6 @@
     >
       <!-- No loader -->
       <slot v-if="!loader"></slot>
-      <!-- loader icon -->
       <!-- white loader -->
       <img
         v-if="loader && !text && !subtle && !stroke"
