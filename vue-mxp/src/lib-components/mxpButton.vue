@@ -9,18 +9,22 @@
       <!-- No loader -->
       <slot v-if="!loader"></slot>
       <!-- loader icon -->
-      <svg
-        v-if="loader && !text"
-        :fill="stroke || subtle ? 'skyblue' : 'white'"
-        class="animate-spin"
-        :width="scale"
-        :height="scale"
-        viewBox="0 0 50 50"
-      >
-        <path
-          d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"
-        ></path>
-      </svg>
+      <!-- white loader -->
+      <img
+        v-if="loader && !text && !subtle && !stroke"
+        class="animate-spin p-0"
+        :style="`height:${scale}px; width: ${scale}px`"
+        src="../assets/icons/loader-white.svg"
+        alt=""
+      />
+      <!-- skyblue loader -->
+      <img
+        v-if="loader && !text && (stroke || subtle)"
+        class="animate-spin p-0"
+        :style="`height:${scale}px; width: ${scale}px`"
+        src="../assets/icons/loader-skyblue.svg"
+        alt=""
+      />
       <!-- loader text  -->
       <span v-if="loader && text" class="text-blue">loading...</span>
     </button>
@@ -87,7 +91,7 @@ export default defineComponent({
 
     // Size helper for small/normal button
     scale(): string {
-      return this.small ? "15" : "23";
+      return this.small ? "24" : "28";
     },
 
     // Button with no props
