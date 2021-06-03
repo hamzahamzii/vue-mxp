@@ -15,17 +15,17 @@
     />
 
     <!-- Search Inputs -->
-    <mxpTextInput class="my-2" search placeholder="Text field" />
+    <mxpTextInput class="my-2" icon="search" placeholder="Text field" />
     <mxpTextInput
       class="my-2"
-      username
+      icon='user'
       placeholder="Success field"
       message="Success message"
       success
     />
     <mxpTextInput
       class="my-2"
-      username
+      icon="user"
       placeholder="Error field"
       error
       message="Error message"

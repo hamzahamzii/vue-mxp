@@ -3,15 +3,15 @@
   <div class="p-10 m-3 w-full max-w-xl shadow-2xl">
     <mxpTextInput
       class="my-4 shadow-md"
-      username
+      icon="user"
       small
       placeholder="User name"
     />
-    <mxpTextInput class="my-4 shadow-md" email small placeholder="Email" />
+    <mxpTextInput class="my-4 shadow-md" icon="envelope" small placeholder="Email" />
     <mxpTextInput
       type="Password"
       class="my-4 shadow-md"
-      pass
+      icon='envelope'
       small
       placeholder="Password"
     />

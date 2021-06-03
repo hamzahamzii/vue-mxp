@@ -7,44 +7,12 @@
     >
       <!-- Search icon -->
       <img
-        v-if="search && !description"
+        id="icon"
+        v-if="icon && !description"
         class="bg-transparent mr-2"
-        src="../assets/icons/search.svg"
-        alt=""
+        :src="require('../assets/icons/' + icon + '.svg')"
+        @error="require('../assets/icons/search.svg')"
       />
-      <!-- user icon -->
-      <img
-        v-if="username && !description"
-        class="bg-transparent mr-2"
-        src="../assets/icons/user.svg"
-        alt=""
-      />
-      <!-- Email icon -->
-      <img
-        class="bg-transparent mr-2"
-        v-if="email && !description"
-        src="../assets/icons/envelope.svg"
-        alt=""
-      />
-
-      <!-- password icon -->
-      <svg
-        v-if="pass && !description"
-        xmlns="http://www.w3.org/2000/svg"
-        height="21"
-        width="21"
-        class="bg-transparent mr-2"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
       <!-- Input field -->
       <input
         v-if="!description"
@@ -70,7 +38,7 @@
       <label
         class="text-gray-400 truncate"
         :class="{
-          'left-11 w-3/4': search || username || email || pass,
+          'left-11 w-3/4': icon || username || email || pass,
           'text-green-500': success,
           'text-red-500': error,
           'w-1/2': !search && !username,
@@ -132,6 +100,7 @@ export default defineComponent({
     placeholder: String,
 
     // Icons
+    icon: String,
     search: Boolean,
     username: Boolean,
     email: Boolean,
@@ -173,6 +142,10 @@ export default defineComponent({
         "background-color": this.color ? this.color : "",
       };
     },
+  },
+  methods:{
+    defaultImage(){
+    }
   },
   watch: {
     focus(value) {
