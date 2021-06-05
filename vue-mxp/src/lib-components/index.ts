@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
-import mxpButton from "./mxpButton.vue";
-import mxpTextInput from "./mxpTextInput.vue";
-import mxpCheckBox from "./mxpCheckBox.vue";
-import mxpRadioButton from "./mxpRadioButton.vue";
-
+import mxpBtn from "./mxp-btn.vue";
+import mxpTxtInput from "./mxp-txt-input.vue";
+import mxpCheckBox from "./mxp-check-box.vue";
+import mxpRadioBtn from "./mxp-radio-btn.vue";
 import "@/assets/tailwind.css";
 
-export { mxpButton, mxpTextInput, mxpCheckBox, mxpRadioButton };
+export { mxpBtn, mxpTxtInput, mxpCheckBox, mxpRadioBtn };
+

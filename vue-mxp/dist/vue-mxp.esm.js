@@ -1,7 +1,7 @@
 import { defineComponent, pushScopeId, popScopeId, openBlock, createBlock, createVNode, renderSlot, createCommentVNode, withScopeId, withDirectives, vModelDynamic, vModelText, toDisplayString } from 'vue';
 
 var script$3 = defineComponent({
-  name: "mxp-btn",
+  name: "mxpBtn",
   props: {
     // Sizing
     width: Number,
@@ -131,7 +131,7 @@ script$3.render = render$3;
 script$3.__scopeId = "data-v-9a7a29b0";
 
 var script$2 = defineComponent({
-  name: "mxpTextInput",
+  name: "mxpTxtInput",
   props: {
     // Sizing
     width: Number,
@@ -350,7 +350,7 @@ script$2.render = render$2;
 script$2.__scopeId = "data-v-4c9db392";
 
 var script$1 = defineComponent({
-  name: "mxp-check-box",
+  name: "mxpCheckBox",
   props: {
     // Type
     disabled: Boolean
@@ -387,7 +387,7 @@ script$1.render = render$1;
 script$1.__scopeId = "data-v-11af35e3";
 
 var script = defineComponent({
-  name: "mxp-check-box",
+  name: "mxpCheckBox",
   props: {
     // Type
     disabled: Boolean,
@@ -430,10 +430,10 @@ script.__scopeId = "data-v-07f3384b";
 
 var components = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  mxpButton: script$3,
-  mxpTextInput: script$2,
+  mxpBtn: script$3,
+  mxpTxtInput: script$2,
   mxpCheckBox: script$1,
-  mxpRadioButton: script
+  mxpRadioBtn: script
 });
 
 // Import vue components
@@ -445,4 +445,4 @@ const install = function installVueMxp(app) {
 }; // Create module definition for Vue.use()
 
 export default install;
-export { script$3 as mxpButton, script$1 as mxpCheckBox, script as mxpRadioButton, script$2 as mxpTextInput };
+export { script$3 as mxpBtn, script$1 as mxpCheckBox, script as mxpRadioBtn, script$2 as mxpTxtInput };

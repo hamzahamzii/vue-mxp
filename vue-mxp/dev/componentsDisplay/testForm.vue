@@ -1,14 +1,14 @@
 <template>
   <h1 class="display-medium-bold m-4">Signup</h1>
   <div class="p-10 m-3 w-full max-w-xl shadow-2xl">
-    <mxpTextInput
+    <mxp-txt-input
       class="my-4 shadow-md"
       icon="user"
       small
       placeholder="User name"
     />
-    <mxpTextInput class="my-4 shadow-md" icon="envelope" small placeholder="Email" />
-    <mxpTextInput
+    <mxp-txt-input class="my-4 shadow-md" icon="envelope" small placeholder="Email" />
+    <mxp-txt-input
       type="Password"
       class="my-4 shadow-md"
       icon='envelope'
@@ -16,15 +16,15 @@
       placeholder="Password"
     />
     <div class="flex my-4">
-      <mxpRadioButton></mxpRadioButton>
+      <mxp-radio-btn></mxp-radio-btn>
       <small class="my-1 mx-1">Male</small>
-      <mxpRadioButton class="mx-1"></mxpRadioButton>
+      <mxp-radio-btn class="mx-1"></mxp-radio-btn>
       <small class="my-1 mx-1">Female</small>
     </div>
     <div class="flex my-4">
-      <mxpCheckBox></mxpCheckBox>
+      <mxp-check-box></mxp-check-box>
       <small class="my-1 mx-1">I accept all the terms and conditions.</small>
     </div>
-    <mxpButton class="sm:float-right" rounded filled>Signup</mxpButton>
+    <mxp-btn class="sm:float-right" rounded filled>Signup</mxp-btn>
   </div>
 </template>

@@ -74,8 +74,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { mxpBtn } from ".";
 export default defineComponent({
-  name: "mxpTextInput",
+  name: "mxpTxtInput",
+  components: {
+  'mxp-btn': mxpBtn
+   },
   props: {
     // Sizing
     width: Number,
