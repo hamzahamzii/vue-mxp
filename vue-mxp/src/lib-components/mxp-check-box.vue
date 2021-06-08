@@ -1,7 +1,7 @@
 <template>
   <div>
     <label class="container">
-      <input :disabled="disabled" class="absolute opacity-0" type="checkbox" checked="checked">
+      <input :disabled="disabled" class="absolute opacity-0" type="checkbox" :checked="checked">
       <span  :class="{'opacity-40':disabled}"  class="checkmark absolute cursor-pointer rounded-full top-0 left-0 bg-gray-300 hover:bg-gray-400"></span>
     </label>
   </div>
@@ -14,6 +14,7 @@ export default defineComponent({
   props: {
     // Type
     disabled: Boolean,
+    checked:Boolean
   },
 });
   </script>

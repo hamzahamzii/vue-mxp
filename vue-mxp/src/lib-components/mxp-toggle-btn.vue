@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- Rounded switch -->
-    <label class="relative inline-block">
-        <input type="checkbox" class="opacity-0 w-0 h-0">
-        <span class="slider rounded-full cursro-pointer top-0 left-0 bottom-0 right-0 absolute"></span>
+    <label class="relative inline-block bg-gray-300 rounded-full hover:bg-gray-400 switch">
+        <input :checked="checked" :disabled="disabled" type="checkbox" class="opacity-0 w-0 h-0">
+        <span :class="{'opacity-30':disabled}" class="slider round rounded-full cursro-pointer top-0 left-0 bottom-0 right-0 absolute"></span>
     </label>
   </div>
 </template>
@@ -15,6 +15,7 @@ export default defineComponent({
   props: {
     // Type
     disabled: Boolean,
+    checked: Boolean
   },
 
 });
@@ -22,19 +23,10 @@ export default defineComponent({
 
  <style scoped>
 /* The switch - the box around the slider */
-/* .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-} */
-
-/* Hide default HTML checkbox */
-/* .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-} */
+.switch {
+  width: 64px;
+  height: 36px;
+}
 
 /* The slider */
 .slider {
@@ -45,21 +37,26 @@ export default defineComponent({
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 28px;
+  width: 28px;
   left: 4px;
   bottom: 4px;
+  border-radius: 50%;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2DB6F5;
+}
+
+input:checked + .slider:hover {
+  background-color: #008CDB;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2DB6F5;
 }
 
 input:checked + .slider:before {
@@ -68,12 +65,4 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
  </style>
