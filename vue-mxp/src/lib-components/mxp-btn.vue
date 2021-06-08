@@ -33,7 +33,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "mxpBtn",
+  name: "mxp-btn",
   props: {
     // Sizing
     width: Number,

@@ -10,13 +10,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "mxpCheckBox",
+  name: "mxp-check-box",
   props: {
     // Type
     disabled: Boolean,
-
   },
-
 });
   </script>
 

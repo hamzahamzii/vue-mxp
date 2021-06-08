@@ -10,7 +10,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "mxpCheckBox",
+  name: "mxp-radio-btn",
   props: {
     // Type
     disabled: Boolean,

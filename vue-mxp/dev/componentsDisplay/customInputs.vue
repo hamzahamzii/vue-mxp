@@ -16,4 +16,11 @@
     <mxp-radio-btn class="mx-3"></mxp-radio-btn>
     <mxp-radio-btn class="mx-3"></mxp-radio-btn>
   </div>
+  <div class="flex justify-center my-6">
+    <!-- Toogle Buttons -->
+    <div class="mx-3">Toggle Buttons</div>
+    <mxp-toggle-btn disabled class="mx-3"></mxp-toggle-btn>
+    <mxp-toggle-btn class="mx-3"></mxp-toggle-btn>
+    <mxp-toggle-btn class="mx-3"></mxp-toggle-btn>
+  </div>
 </template>
